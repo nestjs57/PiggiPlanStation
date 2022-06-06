@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/layout_station"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_normal_12dp"
+        android:background="@drawable/ic_bg_apl"
+        android:paddingVertical="@dimen/space_smaller"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="BTS"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_station_name_th"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_normal"
+        android:ellipsize="end"
+        android:fontFamily="@font/db_heavent_now"
+        android:maxLines="1"
+        android:text="พหลโยธิน 59"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_station"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/layout_station"
+        app:layout_constraintTop_toTopOf="@+id/layout_station" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="25dp"
+        android:layout_height="0dp"
+        android:src="@drawable/icon_srt"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_station_name_th"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_station_name_th" />
+
+    <FrameLayout
+        android:id="@+id/layout_station_code"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_small"
+        android:background="@drawable/ic_bg_apl_stroke"
+        android:paddingVertical="@dimen/space_smaller"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_station">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N24"
+            android:textColor="@color/red_light_srt" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_station_name_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_normal"
+        android:ellipsize="end"
+        android:fontFamily="@font/db_heavent_now"
+        android:maxLines="1"
+        android:text="Phahol Yothin 59"
+        android:textColor="@color/gray500"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_station_code"
+        app:layout_constraintEnd_toStartOf="@+id/tv_distance"
+        app:layout_constraintStart_toEndOf="@+id/layout_station_code"
+        app:layout_constraintTop_toTopOf="@+id/layout_station_code" />
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_normal"
+        android:ellipsize="end"
+        android:fontFamily="@font/db_heavent_now"
+        android:maxLines="1"
+        android:text="1.5 km"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_station_name_en"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_station_name_en" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginTop="@dimen/space_normal_12dp"
+        android:background="@color/gray200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_station_code" />
+</androidx.constraintlayout.widget.ConstraintLayout>

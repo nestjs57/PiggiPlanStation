@@ -1,0 +1,1392 @@
+[
+  {
+    "id": "N24",
+    "name_th": "คูคต",
+    "name_en": "Khu Khot",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.93168094,
+    "long": 100.6454912
+  },
+  {
+    "id": "N23",
+    "name_th": "แยก คปอ.",
+    "name_en": "Yaek Kor Por Aor",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.92606441,
+    "long": 100.6266272
+  },
+  {
+    "id": "N22",
+    "name_th": "พิพิธภัณฑ์กองทัพอากาศ",
+    "name_en": "Royal Thai Air Force Museum",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.91794958,
+    "long": 100.621695
+  },
+  {
+    "id": "N21",
+    "name_th": "โรงพยาบาลภูมิพลอดุลยเดช",
+    "name_en": "Bhumiphol Adulyadej Hospital",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.91076172,
+    "long": 100.6174338
+  },
+  {
+    "id": "N20",
+    "name_th": "สะพานใหม่",
+    "name_en": "Saphan Mai",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.89660065,
+    "long": 100.609124
+  },
+  {
+    "id": "N19",
+    "name_th": "สายหยุด",
+    "name_en": "Sai Yud",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.88838617,
+    "long": 100.6044369
+  },
+  {
+    "id": "N18",
+    "name_th": "พหลโยธิน 59",
+    "name_en": "Phahol Yothin 59",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.81424434,
+    "long": 100.5601651
+  },
+  {
+    "id": "N17",
+    "name_th": "วัดพระศรีมหาธาตุ",
+    "name_en": "Wat Phra Si Maha That",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.87519066,
+    "long": 100.5961231
+  },
+  {
+    "id": "N16",
+    "name_th": "กรมทหารราบที่ 11",
+    "name_en": "11 St Infantry Regiment",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.86752947,
+    "long": 100.5919394
+  },
+  {
+    "id": "N15",
+    "name_th": "บางบัว",
+    "name_en": "Bang Bua",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.85599836,
+    "long": 100.5851736
+  },
+  {
+    "id": "N14",
+    "name_th": "กรมป่าไม้",
+    "name_en": "Royal Forest Department",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.85036596,
+    "long": 100.5818304
+  },
+  {
+    "id": "N13",
+    "name_th": "มหาวิทยาลัยเกษตรศาสตร์",
+    "name_en": "Kasetsart University",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.84236056,
+    "long": 100.5770899
+  },
+  {
+    "id": "N12",
+    "name_th": "เสนานิคม",
+    "name_en": "Sena Nikhom",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.83636145,
+    "long": 100.5736125
+  },
+  {
+    "id": "N11",
+    "name_th": "รัชโยธิน",
+    "name_en": "Ratchayothin",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.83086081,
+    "long": 100.5702733
+  },
+  {
+    "id": "N10",
+    "name_th": "พหลโยธิน 24",
+    "name_en": "Phahonyothin 24",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.8240331,
+    "long": 100.5664669
+  },
+  {
+    "id": "N09",
+    "name_th": "ห้าแยกลาดพร้าว",
+    "name_en": "Ha Yaek Lat Phrao",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.81645083,
+    "long": 100.5619551
+  },
+  {
+    "id": "N08",
+    "name_th": "หมอชิต",
+    "name_en": "Mo Chit",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.80263954,
+    "long": 100.5538508
+  },
+  {
+    "id": "N07",
+    "name_th": "สะพานควาย",
+    "name_en": "Saphan Khwai",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.79356355,
+    "long": 100.5496576
+  },
+  {
+    "id": "N05",
+    "name_th": "อารีย์",
+    "name_en": "Ari",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.77969665,
+    "long": 100.5446464
+  },
+  {
+    "id": "N04",
+    "name_th": "สนามเป้า",
+    "name_en": "Sanam Pao",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.77233578,
+    "long": 100.5421482
+  },
+  {
+    "id": "N03",
+    "name_th": "อนุสาวรีย์ชัยสมรภูมิ",
+    "name_en": "Victory Monument",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.76283455,
+    "long": 100.5371079
+  },
+  {
+    "id": "N02",
+    "name_th": "พญาไท",
+    "name_en": "Phaya Thai",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.75652679,
+    "long": 100.5337291
+  },
+  {
+    "id": "N01",
+    "name_th": "ราชเทวี",
+    "name_en": "Ratchathewi",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.75198798,
+    "long": 100.5315729
+  },
+  {
+    "id": "E1",
+    "name_th": "ชิดลม",
+    "name_en": "Chit Lom",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.74409601,
+    "long": 100.5430565
+  },
+  {
+    "id": "E2",
+    "name_th": "เพลินจิต",
+    "name_en": "Phloen Chit",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.74304693,
+    "long": 100.5489771
+  },
+  {
+    "id": "E3",
+    "name_th": "นานา",
+    "name_en": "Nana",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.74052423,
+    "long": 100.5554346
+  },
+  {
+    "id": "E4",
+    "name_th": "อโศก",
+    "name_en": "Asok",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.73705742,
+    "long": 100.5603046
+  },
+  {
+    "id": "E5",
+    "name_th": "พร้อมพงษ์",
+    "name_en": "Phrom Phong",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.73042023,
+    "long": 100.5697353
+  },
+  {
+    "id": "E6",
+    "name_th": "ทองหล่อ",
+    "name_en": "Thong Lo",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.72428867,
+    "long": 100.5784328
+  },
+  {
+    "id": "E7",
+    "name_th": "เอกมัย",
+    "name_en": "Ekkamai",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.71952995,
+    "long": 100.5850869
+  },
+  {
+    "id": "E8",
+    "name_th": "พระโขนง",
+    "name_en": "Phra Khanong",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.71516632,
+    "long": 100.5912457
+  },
+  {
+    "id": "E9",
+    "name_th": "อ่อนนุช",
+    "name_en": "On Nut",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.70564359,
+    "long": 100.6009867
+  },
+  {
+    "id": "E10",
+    "name_th": "บางจาก",
+    "name_en": "Bang Chak",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.69673434,
+    "long": 100.6053209
+  },
+  {
+    "id": "E11",
+    "name_th": "ปุณณวิถี",
+    "name_en": "Punnawithi",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.68927878,
+    "long": 100.6091055
+  },
+  {
+    "id": "E12",
+    "name_th": "อุดมสุข",
+    "name_en": "Udom Suk",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.68010636,
+    "long": 100.6096967
+  },
+  {
+    "id": "E13",
+    "name_th": "บางนา",
+    "name_en": "Bang Na",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.66813794,
+    "long": 100.6046399
+  },
+  {
+    "id": "E14",
+    "name_th": "แบริ่ง",
+    "name_en": "Bearing",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.66124707,
+    "long": 100.6016839
+  },
+  {
+    "id": "E15",
+    "name_th": "สำโรง",
+    "name_en": "Samrong",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.646198,
+    "long": 100.595649
+  },
+  {
+    "id": "E16",
+    "name_th": "ปู่เจ้า",
+    "name_en": "Pu Chao",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.63728361,
+    "long": 100.5920074
+  },
+  {
+    "id": "E17",
+    "name_th": "ช้างเอราวัณ",
+    "name_en": "Chang Erawan",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.6215499,
+    "long": 100.5901569
+  },
+  {
+    "id": "E18",
+    "name_th": "โรงเรียนนายเรือ",
+    "name_en": "Royal THai Naval Academy",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.60848868,
+    "long": 100.5949799
+  },
+  {
+    "id": "E19",
+    "name_th": "ปากน้ำ",
+    "name_en": "Pak Nam",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.6020916,
+    "long": 100.5971077
+  },
+  {
+    "id": "E20",
+    "name_th": "ศรีนครินทร์",
+    "name_en": "Srinagarindra",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.59207899,
+    "long": 100.6088738
+  },
+  {
+    "id": "E21",
+    "name_th": "แพรกษา",
+    "name_en": "Phwaek Sa",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.58432943,
+    "long": 100.6080227
+  },
+  {
+    "id": "E22",
+    "name_th": "สายลวด",
+    "name_en": "Sai Luat",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.57770475,
+    "long": 100.6053693
+  },
+  {
+    "id": "E23",
+    "name_th": "เคหะฯ",
+    "name_en": "Kheha",
+    "type": 1,
+    "type_name": "สายสีเขียวสุขุมวิท",
+    "have_parking": 0,
+    "lat": 13.56766347,
+    "long": 100.6076721
+  },
+  {
+    "id": "W1",
+    "name_th": "สนามกีฬาแห่งชาติ",
+    "name_en": "National Stadium",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.74648341,
+    "long": 100.529073
+  },
+  {
+    "id": "CEN",
+    "name_th": "สยาม",
+    "name_en": "Siam",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.74560605,
+    "long": 100.5341181
+  },
+  {
+    "id": "S1",
+    "name_th": "ราชดำริ",
+    "name_en": "Ratchadamri",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.73953622,
+    "long": 100.5393346
+  },
+  {
+    "id": "S2",
+    "name_th": "ศาลาแดง",
+    "name_en": "Sala Daeng",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.72850946,
+    "long": 100.5341135
+  },
+  {
+    "id": "S3",
+    "name_th": "ช่องนนทรี",
+    "name_en": "Chong Nonsi",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.72366821,
+    "long": 100.5290868
+  },
+  {
+    "id": "S4",
+    "name_th": "เซนต์หลุยส์",
+    "name_en": "Saint Louis",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.72093066,
+    "long": 100.5269215
+  },
+  {
+    "id": "S5",
+    "name_th": "สุรศักดิ์",
+    "name_en": "Surasak",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.71922938,
+    "long": 100.5215303
+  },
+  {
+    "id": "S6",
+    "name_th": "สะพานตากสิน",
+    "name_en": "Saphan Taksin",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.71879895,
+    "long": 100.5141209
+  },
+  {
+    "id": "S7",
+    "name_th": "กรุงธนบุรี",
+    "name_en": "Krung Thonburi",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.72111442,
+    "long": 100.5036783
+  },
+  {
+    "id": "S8",
+    "name_th": "วงเวียนใหญ่",
+    "name_en": "Wongwian Yai",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.72109633,
+    "long": 100.4953201
+  },
+  {
+    "id": "S9",
+    "name_th": "โพธิ์นิมิตร",
+    "name_en": "Pho Nimit",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.71931773,
+    "long": 100.4860974
+  },
+  {
+    "id": "S10",
+    "name_th": "ตลาดพลู",
+    "name_en": "Talat Phlu",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.71420877,
+    "long": 100.4768016
+  },
+  {
+    "id": "S11",
+    "name_th": "วุฒากาศ",
+    "name_en": "Wutthakad",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.7130918,
+    "long": 100.4688832
+  },
+  {
+    "id": "S12",
+    "name_th": "บางหว้า",
+    "name_en": "Bang Wa",
+    "type": 2,
+    "type_name": "สายสีเขียวสีลม",
+    "have_parking": 0,
+    "lat": 13.71300842,
+    "long": 100.468851
+  },
+  {
+    "id": "BL01",
+    "name_th": "ท่าพระ",
+    "name_en": "Tha Phra",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.72965988,
+    "long": 100.4741626
+  },
+  {
+    "id": "BL02",
+    "name_th": "จรัญฯ 13",
+    "name_en": "Charan 13",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.74015246,
+    "long": 100.4708101
+  },
+  {
+    "id": "BL03",
+    "name_th": "ไฟฉาย",
+    "name_en": "Fai Chai",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.7550998,
+    "long": 100.4692362
+  },
+  {
+    "id": "BL04",
+    "name_th": "บางขุนนนท์",
+    "name_en": "Bang Khun Non",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.76321641,
+    "long": 100.473193
+  },
+  {
+    "id": "BL05",
+    "name_th": "บางยี่ขัน",
+    "name_en": "Bang Yi Khan",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.77743382,
+    "long": 100.4852452
+  },
+  {
+    "id": "BL06",
+    "name_th": "สิรินธร",
+    "name_en": "Sirindhorn",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.78406027,
+    "long": 100.4934924
+  },
+  {
+    "id": "BL07",
+    "name_th": "บางพลัด",
+    "name_en": "Bang Phlat",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.79236978,
+    "long": 100.5049845
+  },
+  {
+    "id": "BL08",
+    "name_th": "บางอ้อ",
+    "name_en": "Bang O",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.79889873,
+    "long": 100.5096539
+  },
+  {
+    "id": "BL09",
+    "name_th": "บางโพ",
+    "name_en": "Bang Pho",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.80643203,
+    "long": 100.5207369
+  },
+  {
+    "id": "BL10",
+    "name_th": "เตาปูน",
+    "name_en": "Tao Poon",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.8062323,
+    "long": 100.5307145
+  },
+  {
+    "id": "BL11",
+    "name_th": "บางซื่อ",
+    "name_en": "Bang Sue",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.80307795,
+    "long": 100.5391555
+  },
+  {
+    "id": "BL12",
+    "name_th": "กำแพงเพชร",
+    "name_en": "Kamphaeng Phet",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.79809161,
+    "long": 100.5475981
+  },
+  {
+    "id": "BL13",
+    "name_th": "สวนจตุจักร",
+    "name_en": "Chatuchak Park",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.80374593,
+    "long": 100.5540609
+  },
+  {
+    "id": "BL14",
+    "name_th": "พหลโยธิน",
+    "name_en": "Phahon Yothin",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.81354232,
+    "long": 100.5606519
+  },
+  {
+    "id": "BL15",
+    "name_th": "ลาดพร้าว",
+    "name_en": "Lat Phrao",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.80611155,
+    "long": 100.5736454
+  },
+  {
+    "id": "BL16",
+    "name_th": "รัชดาภิเษก",
+    "name_en": "Ratchadaphisek",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.79919888,
+    "long": 100.5746089
+  },
+  {
+    "id": "BL17",
+    "name_th": "สุทธิสาร",
+    "name_en": "Sutthisan",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.78987885,
+    "long": 100.5742001
+  },
+  {
+    "id": "BL18",
+    "name_th": "ห้วยขวาง",
+    "name_en": "Huai Khwang",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.77850995,
+    "long": 100.5736281
+  },
+  {
+    "id": "BL19",
+    "name_th": "ศูนย์วัฒนธรรมแห่งประเทศไทย",
+    "name_en": "Thailand Cultural Centre",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.76635663,
+    "long": 100.5702525
+  },
+  {
+    "id": "BL20",
+    "name_th": "พระราม 9",
+    "name_en": "Phra Ram 9",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.75724295,
+    "long": 100.5651241
+  },
+  {
+    "id": "BL21",
+    "name_th": "เพชรบุรี",
+    "name_en": "Phetchaburi",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.74877664,
+    "long": 100.5631134
+  },
+  {
+    "id": "BL22",
+    "name_th": "สุขุมวิท",
+    "name_en": "Sukhumvit",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.73853261,
+    "long": 100.5614371
+  },
+  {
+    "id": "BL23",
+    "name_th": "ศูนย์ประชุมแห่งชาติสิริกิติ์",
+    "name_en": "Queen Sirikit National Convention Centre",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.72317274,
+    "long": 100.5601019
+  },
+  {
+    "id": "BL24",
+    "name_th": "คลองเตย",
+    "name_en": "Khlong Toei",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.72237638,
+    "long": 100.5539193
+  },
+  {
+    "id": "BL25",
+    "name_th": "ลุมพินี",
+    "name_en": "Lumphini",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.72584237,
+    "long": 100.5456771
+  },
+  {
+    "id": "BL26",
+    "name_th": "สีลม",
+    "name_en": "Si Lom",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.72929457,
+    "long": 100.5365218
+  },
+  {
+    "id": "BL27",
+    "name_th": "สามย่าน",
+    "name_en": "Sam Yan",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.73233786,
+    "long": 100.5300201
+  },
+  {
+    "id": "BL28",
+    "name_th": "หัวลำโพง",
+    "name_en": "Hua Lamphong",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.73786969,
+    "long": 100.5171869
+  },
+  {
+    "id": "BL29",
+    "name_th": "วัดมังกร",
+    "name_en": "Wat Mangkon",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.74203334,
+    "long": 100.5102136
+  },
+  {
+    "id": "BL30",
+    "name_th": "สามยอด",
+    "name_en": "Sam Yot",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.74704388,
+    "long": 100.5012834
+  },
+  {
+    "id": "BL31",
+    "name_th": "สนามไชย",
+    "name_en": "Sanam Chai",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.74387022,
+    "long": 100.4946585
+  },
+  {
+    "id": "BL32",
+    "name_th": "อิสรภาพ",
+    "name_en": "Itsaraphap",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.73838007,
+    "long": 100.4852904
+  },
+  {
+    "id": "BL33",
+    "name_th": "บางไผ่",
+    "name_en": "Bang Phai",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.89234435,
+    "long": 100.4082654
+  },
+  {
+    "id": "BL34",
+    "name_th": "บางหว้า",
+    "name_en": "Bang Wa",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.72017457,
+    "long": 100.4570315
+  },
+  {
+    "id": "BL35",
+    "name_th": "เพชรเกษม 48",
+    "name_en": "Phetkasem 48",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.71555615,
+    "long": 100.4456105
+  },
+  {
+    "id": "BL36",
+    "name_th": "ภาษีเจริญ",
+    "name_en": "Phasi Charoen",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.71290886,
+    "long": 100.434146
+  },
+  {
+    "id": "BL37",
+    "name_th": "บางแค",
+    "name_en": "Bang Khae",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.71167388,
+    "long": 100.4211863
+  },
+  {
+    "id": "BL38",
+    "name_th": "หลักสอง",
+    "name_en": "Lak Song",
+    "type": 3,
+    "type_name": "สายสีน้ำเงิน",
+    "have_parking": 0,
+    "lat": 13.71100115,
+    "long": 100.4100118
+  },
+  {
+    "id": "PP01",
+    "name_th": "คลองบางไผ่",
+    "name_en": "Khlong Bang Phai",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.89239266,
+    "long": 100.4083018
+  },
+  {
+    "id": "PP02",
+    "name_th": "ตลาดบางใหญ่",
+    "name_en": "Talad Bang Yai",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.88113287,
+    "long": 100.4092427
+  },
+  {
+    "id": "PP03",
+    "name_th": "สามแยกบางใหญ่",
+    "name_en": "Sam Yaek Bang Yai",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87479847,
+    "long": 100.4195137
+  },
+  {
+    "id": "PP04",
+    "name_th": "บางพลู",
+    "name_en": "Bang Phlu",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87573246,
+    "long": 100.4339222
+  },
+  {
+    "id": "PP05",
+    "name_th": "บางรักใหญ่",
+    "name_en": "Bang Rak Yai",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87665442,
+    "long": 100.4448834
+  },
+  {
+    "id": "PP06",
+    "name_th": "บางรักน้อย-ท่าอิฐ",
+    "name_en": "Bang Rak Noi Tha It",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87483106,
+    "long": 100.4560521
+  },
+  {
+    "id": "PP07",
+    "name_th": "ไทรม้า",
+    "name_en": "Sai Ma",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87051515,
+    "long": 100.4666388
+  },
+  {
+    "id": "PP08",
+    "name_th": "สะพานพระนั่งเกล้า",
+    "name_en": "Phra Nang Klao Bridge",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87035425,
+    "long": 100.4803503
+  },
+  {
+    "id": "PP09",
+    "name_th": "แยกนนทบุรี 1",
+    "name_en": "Yaek Nonthaburi 1",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.86603268,
+    "long": 100.494037
+  },
+  {
+    "id": "PP10",
+    "name_th": "บางกระสอ",
+    "name_en": "Bang Krasor",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.86174012,
+    "long": 100.5044639
+  },
+  {
+    "id": "PP11",
+    "name_th": "ศูนย์ราชการนนทบุรี",
+    "name_en": "Nonthaburi Civic Center",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.86019043,
+    "long": 100.5132546
+  },
+  {
+    "id": "PP12",
+    "name_th": "กระทรวงสาธารณสุข",
+    "name_en": "Ministry of Public Health",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.84859228,
+    "long": 100.5147667
+  },
+  {
+    "id": "PP13",
+    "name_th": "แยกติวานนท์",
+    "name_en": "Yaek Tiwanon",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.83967809,
+    "long": 100.514838
+  },
+  {
+    "id": "PP14",
+    "name_th": "วงศ์สว่าง",
+    "name_en": "Wong Sawang",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.82918159,
+    "long": 100.5273741
+  },
+  {
+    "id": "PP15",
+    "name_th": "บางซ่อน",
+    "name_en": "Bang Son",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.82022292,
+    "long": 100.5325447
+  },
+  {
+    "id": "PP16",
+    "name_th": "เตาปูน",
+    "name_en": "Tao Poon",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.8061343,
+    "long": 100.5307564
+  },
+  {
+    "id": "A1",
+    "name_th": "สุวรรณภูมิ",
+    "name_en": "Suvarnabhumi",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.69814918,
+    "long": 100.7522164
+  },
+  {
+    "id": "A2",
+    "name_th": "ลาดกระบัง",
+    "name_en": "Lat Krabang",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.72783986,
+    "long": 100.7485788
+  },
+  {
+    "id": "A3",
+    "name_th": "บ้านทับช้าง",
+    "name_en": "Ban Thap Chang",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.73280954,
+    "long": 100.6912264
+  },
+  {
+    "id": "A4",
+    "name_th": "หัวหมาก",
+    "name_en": "Hua Mak",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.73820475,
+    "long": 100.6451844
+  },
+  {
+    "id": "A5",
+    "name_th": "รามคำแหง",
+    "name_en": "Ramkhamhaeng",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.74281633,
+    "long": 100.6000064
+  },
+  {
+    "id": "A6",
+    "name_th": "มักกะสัน",
+    "name_en": "Makkasan",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.75083941,
+    "long": 100.5612982
+  },
+  {
+    "id": "A7",
+    "name_th": "ราชปรารภ",
+    "name_en": "Ratchaprarop",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.75497477,
+    "long": 100.5421239
+  },
+  {
+    "id": "A8",
+    "name_th": "พญาไท",
+    "name_en": "Phaya Thai",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.75673912,
+    "long": 100.5348285
+  },
+  {
+    "id": "G1",
+    "name_th": "กรุงธนบุุรี",
+    "name_en": "Krung Thonburi",
+    "type": 6,
+    "type_name": "สายสีทอง",
+    "have_parking": 0,
+    "lat": 13.72111157,
+    "long": 100.5036768
+  },
+  {
+    "id": "G2",
+    "name_th": "เจริญนคร",
+    "name_en": "Charoen Nakorn",
+    "type": 6,
+    "type_name": "สายสีทอง",
+    "have_parking": 0,
+    "lat": 13.72647562,
+    "long": 100.509006
+  },
+  {
+    "id": "G3",
+    "name_th": "คลองสาน",
+    "name_en": "Khlong San",
+    "type": 6,
+    "type_name": "สายสีทอง",
+    "have_parking": 0,
+    "lat": 13.73038421,
+    "long": 100.5076567
+  },
+  {
+    "id": "RN01",
+    "name_th": "บางซื่่อ",
+    "name_en": "Bangsue",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.80368428,
+    "long": 100.5421718
+  },
+  {
+    "id": "RN02",
+    "name_th": "จตุจักร",
+    "name_en": "Chatuchak",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.82652411,
+    "long": 100.5494138
+  },
+  {
+    "id": "RN03",
+    "name_th": "วัดเสมียนนารี",
+    "name_en": "Wat Samian Nari",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.84165713,
+    "long": 100.5575235
+  },
+  {
+    "id": "RN04",
+    "name_th": "บางเขน",
+    "name_en": "Bang Khen",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.84699582,
+    "long": 100.5607304
+  },
+  {
+    "id": "RN05",
+    "name_th": "ทุ่งสองห้อง",
+    "name_en": "Thung Song Hong",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.86011093,
+    "long": 100.5675306
+  },
+  {
+    "id": "RN06",
+    "name_th": "หลักสี่",
+    "name_en": "Lak Si",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.88623335,
+    "long": 100.5818612
+  },
+  {
+    "id": "RN07",
+    "name_th": "การเคหะ",
+    "name_en": "Kan Kheha",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.89839916,
+    "long": 100.588838
+  },
+  {
+    "id": "RN08",
+    "name_th": "ดอนเมือง",
+    "name_en": "Don Muang",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.91502415,
+    "long": 100.5979874
+  },
+  {
+    "id": "RN09",
+    "name_th": "หลักหก",
+    "name_en": "Lak Hok",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.96585427,
+    "long": 100.60552
+  },
+  {
+    "id": "RN10",
+    "name_th": "รังสิต",
+    "name_en": "Rangsit",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.99051349,
+    "long": 100.6022656
+  },
+  {
+    "id": "RW01",
+    "name_th": "บางซื่อ",
+    "name_en": "Bangsue",
+    "type": 8,
+    "type_name": "สายสีแดงอ่อน",
+    "have_parking": 0,
+    "lat": 13.80374382,
+    "long": 100.5421808
+  },
+  {
+    "id": "RW02",
+    "name_th": "บางซ่อน",
+    "name_en": "Bangson",
+    "type": 8,
+    "type_name": "สายสีแดงอ่อน",
+    "have_parking": 0,
+    "lat": 13.82204316,
+    "long": 100.5341984
+  },
+  {
+    "id": "RW05",
+    "name_th": "บางบำหรุ",
+    "name_en": "Bang Bamru",
+    "type": 8,
+    "type_name": "สายสีแดงอ่อน",
+    "have_parking": 0,
+    "lat": 13.7916979,
+    "long": 100.477956
+  },
+  {
+    "id": "Rw06",
+    "name_th": "ตลิ่งชัน",
+    "name_en": "Taling Chan",
+    "type": 8,
+    "type_name": "สายสีแดงอ่อน",
+    "have_parking": 0,
+    "lat": 13.789346,
+    "long": 100.4399909
+  }
+]
