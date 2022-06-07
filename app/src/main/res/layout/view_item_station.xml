@@ -15,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/tv_station"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -33,12 +34,12 @@
         android:text="พหลโยธิน 59"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/layout_station"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/img_logo"
         app:layout_constraintStart_toEndOf="@+id/layout_station"
         app:layout_constraintTop_toTopOf="@+id/layout_station" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_logo"
         android:layout_width="25dp"
         android:layout_height="0dp"
         android:src="@drawable/icon_srt"
@@ -57,6 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/layout_station">
 
         <TextView
+            android:id="@+id/tv_station_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -81,8 +83,8 @@
 
     <TextView
         android:id="@+id/tv_distance"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="@dimen/space_normal"
         android:ellipsize="end"
         android:fontFamily="@font/db_heavent_now"

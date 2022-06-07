@@ -7,28 +7,101 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blue_light"
+        android:paddingTop="4dp"
         tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvLocationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_white_stroke_black"
+            android:drawableStart="@drawable/quantum_ic_search_grey600_24"
+            android:drawablePadding="@dimen/space_small"
+            android:ellipsize="end"
+            android:fontFamily="@font/db_heavent_now"
+            android:maxLines="1"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="เลือกสถานที่ เพื่อหาสถานีที่ใกล้ที่สุด ..."
+            android:textColor="@color/gray700"
+            android:textSize="14sp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/db_heavent_now"
+            android:paddingHorizontal="8dp"
+            android:text="สถานีที่ใกล้ที่สุด :"
+            android:textColor="@color/gray700"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/tvLocationName" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_inner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="16dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
             card_view:cardBackgroundColor="@color/white"
             card_view:cardCornerRadius="10dp"
             card_view:cardElevation="0dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent">
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_title">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/restaurantRecyclerView"
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/space_normal_12dp"
-                tools:itemCount="10"
-                tools:listitem="@layout/view_item_station" />
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/space_extra_large"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/icon_station_empty_state" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/db_heavent_now"
+                        android:paddingHorizontal="8dp"
+                        android:text="ไม่พบสถานี"
+                        android:textColor="@color/gray500"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/tvLocationName" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/space_normal_12dp"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/view_item_station" />
+
+            </ViewFlipper>
 
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

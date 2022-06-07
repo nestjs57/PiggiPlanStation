@@ -3,9 +3,9 @@ package com.arnoract.piggiplanstation.domain.main
 import com.arnoract.piggiplanstation.core.UseCase
 import com.arnoract.piggiplanstation.domain.model.main.Station
 
-class GetStationNearByUseCase(
+class GetStationsUseCase(
     private val stationRepository: StationRepository
-) : UseCase<GetStationNearByUseCase.Params, MutableList<Station>>() {
+) : UseCase<GetStationsUseCase.Params, MutableList<Station>>() {
 
     override suspend fun execute(parameters: Params): MutableList<Station> {
         return stationRepository.getStations()
