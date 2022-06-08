@@ -5,14 +5,9 @@ import com.arnoract.piggiplanstation.domain.model.main.Station
 
 class GetStationsUseCase(
     private val stationRepository: StationRepository
-) : UseCase<GetStationsUseCase.Params, MutableList<Station>>() {
+) : UseCase<Unit, MutableList<Station>>() {
 
-    override suspend fun execute(parameters: Params): MutableList<Station> {
+    override suspend fun execute(parameters: Unit): MutableList<Station> {
         return stationRepository.getStations()
     }
-
-    data class Params(
-        val lat: Double,
-        val long: Double
-    )
 }
