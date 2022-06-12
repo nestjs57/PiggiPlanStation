@@ -58,13 +58,48 @@
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_title">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_station"
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/space_normal_12dp"
-                tools:itemCount="10"
-                tools:listitem="@layout/view_item_station" />
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_logo"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="50dp"
+                        android:src="@drawable/ic_empty_amico" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/db_heavent_now"
+                        android:gravity="center_horizontal"
+                        android:paddingHorizontal="8dp"
+                        android:text="ไม่พบสถานีที่ค้นหา"
+                        android:textColor="@color/gray700"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/space_normal_12dp"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/view_item_station" />
+
+            </ViewFlipper>
 
         </androidx.cardview.widget.CardView>
 

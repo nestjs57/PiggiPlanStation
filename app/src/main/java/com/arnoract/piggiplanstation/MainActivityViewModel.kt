@@ -21,26 +21,6 @@ class MainActivityViewModel(
     val uiStations: LiveData<List<UiStation>>
         get() = _uiStations
 
-    init {
-        initDefaultStations()
-    }
-
-    private fun initDefaultStations() {
-        viewModelScope.launch {
-            val stations = withContext(coroutinesDispatcherProvider.io) {
-                getStationsUseCase.invoke(Unit).successOr(listOf())
-            }
-            _uiStations.value = stations.map {
-                StationToUiStationMapper(
-                    lat = 0.0,
-                    long = 0.0
-                ).map(it).copy(
-                    isShowDistance = false
-                )
-            }
-        }
-    }
-
     fun getStationNearByLatLong(lat: Double, long: Double) {
         viewModelScope.launch {
             val stations = withContext(coroutinesDispatcherProvider.io) {
@@ -52,7 +32,6 @@ class MainActivityViewModel(
                     long = long
                 ).map(it)
             }.sortedBy { it.distance }
-
         }
     }
 }

@@ -33,7 +33,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     }
                     binding.tvLocationName.text = place.name
                     binding.tvLocationName.setTextColor(this.getColor(R.color.black))
-                    binding.tvTitle.text = "สถานีที่ใกล้ที่สุด :"
+                    binding.tvTitle.text = "สถานีที่ใกล้ที่สุด : "
                 }
             }
         }
@@ -62,6 +62,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         mViewModel.uiStations.observe(this) {
             mAdapter.submitList(it)
             binding.rcvStation.smoothScrollToPosition(0)
+            binding.viewFlipper.displayedChild = if (it.isNullOrEmpty()) 0 else 1
         }
     }
 
