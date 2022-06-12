@@ -1,6 +1,7 @@
 package com.arnoract.piggiplanstation
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
@@ -21,6 +22,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private val mAdapter
         get() = _mAdapter!!
 
+    private val searchingProgressDialog: ProgressDialog by lazy {
+        ProgressDialog(this, R.style.MyAlertDialogStyle).apply {
+            isIndeterminate = true
+            setCancelable(false)
+            setMessage("กำลังค้นหา...")
+        }
+    }
+
     private var resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -33,7 +42,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     }
                     binding.tvLocationName.text = place.name
                     binding.tvLocationName.setTextColor(this.getColor(R.color.black))
-                    binding.tvTitle.text = "สถานีที่ใกล้ที่สุด : "
+                    searchingProgressDialog.show()
                 }
             }
         }
@@ -63,6 +72,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             mAdapter.submitList(it)
             binding.rcvStation.smoothScrollToPosition(0)
             binding.viewFlipper.displayedChild = if (it.isNullOrEmpty()) 0 else 1
+            searchingProgressDialog.dismiss()
         }
     }
 

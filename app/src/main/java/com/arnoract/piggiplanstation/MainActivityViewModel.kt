@@ -9,6 +9,7 @@ import com.arnoract.piggiplanstation.core.successOr
 import com.arnoract.piggiplanstation.domain.main.GetStationsUseCase
 import com.arnoract.piggiplanstation.ui.main.mapper.StationToUiStationMapper
 import com.arnoract.piggiplanstation.ui.main.model.UiStation
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -26,6 +27,7 @@ class MainActivityViewModel(
             val stations = withContext(coroutinesDispatcherProvider.io) {
                 getStationsUseCase.invoke(Unit).successOr(listOf())
             }
+            delay(300)
             _uiStations.value = stations.map {
                 StationToUiStationMapper(
                     lat = lat,
