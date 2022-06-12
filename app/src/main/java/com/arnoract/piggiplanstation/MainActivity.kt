@@ -33,7 +33,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     }
                     binding.tvLocationName.text = place.name
                     binding.tvLocationName.setTextColor(this.getColor(R.color.black))
-                    binding.tvTitle.text = "สถานีที่ใกล้ที่สุด :"
+                    binding.tvTitle.text = "สถานีที่ใกล้ที่สุด : "
                 }
             }
         }
