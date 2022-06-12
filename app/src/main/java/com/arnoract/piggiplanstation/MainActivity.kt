@@ -23,7 +23,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         get() = _mAdapter!!
 
     private val searchingProgressDialog: ProgressDialog by lazy {
-        ProgressDialog(this, R.style.MyAlertDialogStyle).apply {
+        ProgressDialog(this, R.style.DialogNoTitle).apply {
             isIndeterminate = true
             setCancelable(false)
             setMessage("กำลังค้นหา...")
