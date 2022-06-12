@@ -62,6 +62,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         mViewModel.uiStations.observe(this) {
             mAdapter.submitList(it)
             binding.rcvStation.smoothScrollToPosition(0)
+            binding.viewFlipper.displayedChild = if (it.isNullOrEmpty()) 0 else 1
         }
     }
 
