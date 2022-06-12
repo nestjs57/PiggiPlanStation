@@ -13,7 +13,7 @@ class MyApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-//        Places.initialize(applicationContext, getString(R.string.google_maps_key), Locale.US)
+        Places.initialize(applicationContext, getString(R.string.google_maps_key), Locale.US)
         startKoin {
             androidContext(this@MyApplication)
         }

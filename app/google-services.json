@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "658796710203",
+    "project_id": "piggi-plan-station",
+    "storage_bucket": "piggi-plan-station.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658796710203:android:5355242d7ae23c9d25cf1e",
+        "android_client_info": {
+          "package_name": "com.arnoract.piggiplanstation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658796710203-3i3g78dum585t5jrqvhpjaakoc12ogh1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arnoract.piggiplanstation",
+            "certificate_hash": "60dbf3236395a32ac77ed4b89ffb85f8b244f623"
+          }
+        },
+        {
+          "client_id": "658796710203-087ruqsbofc1ruahrj49j9v3tkvsmd08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA16dfuVRnGeK-aQBYvtch_grk1Mw406Ro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658796710203-087ruqsbofc1ruahrj49j9v3tkvsmd08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
