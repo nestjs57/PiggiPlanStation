@@ -33,4 +33,6 @@
     <color name="red_light_srt">#D76A6C</color>
 
     <color name="status_bar_color">#154B4F</color>
+    <color name="primary">#FF6347</color>
+    <color name="opposite_primary">#154B4F</color>
 </resources>

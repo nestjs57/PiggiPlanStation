@@ -6,7 +6,7 @@ data class UiStation(
     val id: String,
     val name_th: String,
     val name_en: String,
-    val type: Int,
+    val type: UiType,
     val type_name: String,
     val have_parking: Int,
     val distance: Double,

@@ -2,16 +2,17 @@ package com.arnoract.piggiplanstation
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.PorterDuff
 import android.os.Bundle
-import android.view.Window
-import android.view.WindowManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.arnoract.piggiplanstation.base.BaseActivity
+import com.arnoract.piggiplanstation.core.setDebounceOnClickListener
 import com.arnoract.piggiplanstation.databinding.ActivityMainBinding
 import com.arnoract.piggiplanstation.ui.main.adapter.StationAdapter
+import com.arnoract.piggiplanstation.ui.main.dialog.FilterBottomSheetDialog
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
@@ -19,7 +20,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : BaseActivity<ActivityMainBinding>(),
+    FilterBottomSheetDialog.FilterBottomSheetDialogListener {
 
     override var layoutResource: Int = R.layout.activity_main
     private val mViewModel: MainActivityViewModel by viewModel()
@@ -52,23 +54,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         setContentView(binding.root)
         setupRecyclerView()
         initView()
-
-        val window: Window = this.window
-
-// clear FLAG_TRANSLUCENT_STATUS flag:
-
-// clear FLAG_TRANSLUCENT_STATUS flag:
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-
-// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
-
-// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-
-// finally change the color
-
-// finally change the color
-        window.statusBarColor = ContextCompat.getColor(this, R.color.status_bar_color)
     }
 
     private fun setupRecyclerView() {
@@ -85,6 +70,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.tvLocationName.setOnClickListener {
             openSearchLocation()
         }
+        binding.imvFilter.setDebounceOnClickListener {
+            mViewModel.onOpenFilterType()
+        }
     }
 
     override fun subscribeLiveData() {
@@ -93,6 +81,20 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             binding.rcvStation.smoothScrollToPosition(0)
             binding.viewFlipper.displayedChild = if (it.isNullOrEmpty()) 0 else 1
             dialog?.dismiss()
+        }
+        mViewModel.openDialogFilterType.observe(this) {
+            FilterBottomSheetDialog.newInstance(it, this)
+                .show(
+                    supportFragmentManager,
+                    FilterBottomSheetDialog::class.java.canonicalName
+                )
+        }
+        mViewModel.isEnableFilter.observe(this) {
+            binding.imvFilter.apply {
+                isClickable = it
+                val colorTint = if (it) R.color.opposite_primary else R.color.gray500
+                setColorFilter(ContextCompat.getColor(context, colorTint), PorterDuff.Mode.SRC_IN)
+            }
         }
     }
 
@@ -103,5 +105,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         )
             .build(this)
         resultLauncher.launch(intent)
+    }
+
+    override fun onConfirmSelectedType(type: FilterBottomSheetDialog.TypeSelected) {
+        mViewModel.setFilterType(type)
     }
 }

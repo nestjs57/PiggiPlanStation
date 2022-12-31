@@ -16,33 +16,54 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg_white_stroke_black"
-            android:drawableStart="@drawable/quantum_ic_search_grey600_24"
             android:drawablePadding="@dimen/space_small"
             android:ellipsize="end"
             android:fontFamily="@font/db_heavent_now"
             android:maxLines="1"
             android:paddingHorizontal="16dp"
             android:paddingVertical="8dp"
-            android:text="เลือกสถานที่ เพื่อหาสถานีที่ใกล้ที่สุด ..."
+            android:text="@string/select_location_for_search_nearest"
             android:textColor="@color/gray700"
             android:textSize="14sp"
-            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:drawableStartCompat="@drawable/quantum_ic_search_grey600_24"
+            card_view:layout_constraintEnd_toStartOf="@+id/imv_history"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/imv_history"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="@dimen/space_larger"
+            android:src="@drawable/ic_history"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tvLocationName"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tvLocationName"
+            card_view:tint="@color/opposite_primary" />
+
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/space_normal"
             android:fontFamily="@font/db_heavent_now"
             android:paddingHorizontal="8dp"
-            android:text="สถานีที่ใกล้ที่สุด :"
+            android:text="@string/station_nearest_title"
             android:textColor="@color/gray700"
-            card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tvLocationName" />
+
+        <ImageView
+            android:id="@+id/imv_filter"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="@dimen/space_larger"
+            android:src="@drawable/ic_filter_horizontal"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_title" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_inner"
@@ -84,7 +105,7 @@
                         android:fontFamily="@font/db_heavent_now"
                         android:gravity="center_horizontal"
                         android:paddingHorizontal="8dp"
-                        android:text="ไม่พบสถานีที่ค้นหา"
+                        android:text="@string/location_not_found_label"
                         android:textColor="@color/gray700"
                         android:textSize="24sp"
                         android:textStyle="bold" />
