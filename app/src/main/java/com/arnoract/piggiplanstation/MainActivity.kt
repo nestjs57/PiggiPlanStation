@@ -3,8 +3,11 @@ package com.arnoract.piggiplanstation
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.arnoract.piggiplanstation.base.BaseActivity
 import com.arnoract.piggiplanstation.databinding.ActivityMainBinding
@@ -14,6 +17,7 @@ import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -48,6 +52,23 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         setContentView(binding.root)
         setupRecyclerView()
         initView()
+
+        val window: Window = this.window
+
+// clear FLAG_TRANSLUCENT_STATUS flag:
+
+// clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+
+// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+
+// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+
+// finally change the color
+
+// finally change the color
+        window.statusBarColor = ContextCompat.getColor(this, R.color.status_bar_color)
     }
 
     private fun setupRecyclerView() {

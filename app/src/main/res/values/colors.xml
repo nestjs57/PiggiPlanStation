@@ -31,4 +31,6 @@
     <color name="gold_bts">#CD9934</color>
     <color name="red_srt">#F60723</color>
     <color name="red_light_srt">#D76A6C</color>
+
+    <color name="status_bar_color">#154B4F</color>
 </resources>

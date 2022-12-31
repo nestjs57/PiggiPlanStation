@@ -4,10 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable-v24/bg_toast.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/background_splash_screen.xml" value="0.1945" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/background_splash_screen.xml" value="0.1605" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/bg_white_corner_10dp.xml" value="0.1875" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/bg_white_stroke_black.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_bg_apl.xml" value="0.1415" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_bg_apl_stroke.xml" value="0.1415" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_bg_bts_gold.xml" value="0.1415" />
@@ -24,15 +22,14 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_bg_srtet_red_ligth.xml" value="0.1415" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_bg_srtet_red_ligth_stroke.xml" value="0.1415" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_bg_srtet_red_stroke.xml" value="0.1415" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_empty_search.xml" value="0.187" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_empty_amico.xml" value="0.1605" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1145" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/font/db_heavent_now.xml" value="0.14537037037037037" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/layout/bg_white_corner_10dp.xml" value="0.19074074074074074" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/layout/toast_alert.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/layout/view_item_station.xml" value="0.33" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1945" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1945" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/layout/view_item_station.xml" value="0.25" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/PiggiPlanStation/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1605" />
       </map>
     </option>
   </component>
