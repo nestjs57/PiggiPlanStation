@@ -39,7 +39,8 @@
             card_view:layout_constraintBottom_toBottomOf="@+id/tvLocationName"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintTop_toTopOf="@+id/tvLocationName"
-            card_view:tint="@color/opposite_primary" />
+            card_view:tint="@color/opposite_primary"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/tv_title"
