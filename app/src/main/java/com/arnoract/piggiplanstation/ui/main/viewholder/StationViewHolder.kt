@@ -92,6 +92,13 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.red_light_srt))
             }
+            UiType.MRT_YELLOW -> {
+                binding.imgLogo.setImageResource(R.drawable.icon_mrt_yellow)
+                binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_mrt_yellow)
+                binding.tvStation.text = context.getString(R.string.mrt_label)
+                binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_mrt_yellow_stroke)
+                binding.tvStationCode.setTextColor(context.getColor(R.color.yellow_mrt))
+            }
             else -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_srt)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth)

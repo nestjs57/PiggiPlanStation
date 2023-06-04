@@ -8,5 +8,6 @@ enum class UiType {
     APL,
     BTS_G,
     RED_NORMAL,
-    RED_WEAK
+    RED_WEAK ,
+    MRT_YELLOW
 }

@@ -53,6 +53,7 @@ class MainActivityViewModel(
                 ).map(it)
             }.sortedBy { it.distance }
             _uiStationsData.value = _uiStations.value
+            setFilterType(_currentTypeSelected.value ?: TypeSelected.NONE)
         }
     }
 
@@ -75,7 +76,7 @@ class MainActivityViewModel(
             TypeSelected.MRT -> {
                 _uiStations.value =
                     _uiStationsData.value?.filter {
-                        it.type == UiType.MRT_BLUE || it.type == UiType.MRT_PURPLE
+                        it.type == UiType.MRT_BLUE || it.type == UiType.MRT_PURPLE || it.type == UiType.MRT_YELLOW
                     }
             }
             TypeSelected.APL -> {

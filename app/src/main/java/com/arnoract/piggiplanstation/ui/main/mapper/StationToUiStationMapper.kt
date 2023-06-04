@@ -50,6 +50,7 @@ class StationToUiStationMapper(private val lat: Double, private val long: Double
             6 -> UiType.BTS_G
             7 -> UiType.RED_NORMAL
             8 -> UiType.RED_WEAK
+            9 -> UiType.MRT_YELLOW
             else -> UiType.RED_WEAK
         }
     }

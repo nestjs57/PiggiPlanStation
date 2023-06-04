@@ -3076,7 +3076,7 @@
     "long": 100.477956
   },
   {
-    "id": "Rw06",
+    "id": "RW06",
     "name_th": "ตลิ่งชัน",
     "name_en": "Taling Chan",
     "type": 8,
@@ -3084,5 +3084,235 @@
     "have_parking": 0,
     "lat": 13.789346,
     "long": 100.4399909
+  },
+  {
+    "id": "YL01",
+    "name_th": "ลาดพร้าว",
+    "name_en": "Lat Phrao",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.80611155,
+    "long": 100.5736454
+  },
+  {
+    "id": "YL02",
+    "name_th": "ภาวนา",
+    "name_en": "Phawana",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.799926457323759,
+    "long": 100.58426447651635
+  },
+  {
+    "id": "YL03",
+    "name_th": "โชคชัย 4",
+    "name_en": "Chok Chai 4",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.794704829896414,
+    "long": 100.59428124961876
+  },
+  {
+    "id": "YL04",
+    "name_th": "ลาดพร้าว 71",
+    "name_en": "Lat Phrao 71",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.787430773865044,
+    "long": 100.60721695878792
+  },
+  {
+    "id": "YL05",
+    "name_th": "ลาดพร้าว 83",
+    "name_en": "Lat Phrao 83",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.783644849968471,
+    "long": 100.61361837747191
+  },
+  {
+    "id": "YL06",
+    "name_th": "มหาดไทย",
+    "name_en": "Mahat Thai",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.77837981768431,
+    "long": 100.62333354611816
+  },
+  {
+    "id": "YL07",
+    "name_th": "ลาดพร้าว 101",
+    "name_en": "Lat Phrao 101",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.774384847423176,
+    "long": 100.63037552548815
+  },
+  {
+    "id": "YL08",
+    "name_th": "บางกะปิ",
+    "name_en": "Bang Kapi",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.767216264442224,
+    "long": 100.64279020764612
+  },
+  {
+    "id": "YL09",
+    "name_th": "แยกลำสาลี",
+    "name_en": "Yaek Lam Sali",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.76307527188186,
+    "long": 100.64746998840417
+  },
+  {
+    "id": "YL10",
+    "name_th": "ศรีกรีฑา",
+    "name_en": "Si Kritha",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.750863964700326,
+    "long": 100.64503646513171
+  },
+  {
+    "id": "YL11",
+    "name_th": "หัวหมาก",
+    "name_en": "Hua Mak",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.73620080695873,
+    "long": 100.64142333150173
+  },
+  {
+    "id": "YL12",
+    "name_th": "กลันตัน",
+    "name_en": "Kalantan",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.726479332515346,
+    "long": 100.64201874162384
+  },
+  {
+    "id": "YL13",
+    "name_th": "ศรีนุช",
+    "name_en": "Si Nut",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.711769859376496,
+    "long": 100.64411762474022
+  },
+  {
+    "id": "YL14",
+    "name_th": "ศรีนครินทร์ 38",
+    "name_en": "Srinagarindra 38",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.701779960511127,
+    "long": 100.64644050620393
+  },
+  {
+    "id": "YL15",
+    "name_th": "สวนหลวง ร.9",
+    "name_en": "Suan Luang Rama IX",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.69099088908897,
+    "long": 100.64726664891748
+  },
+  {
+    "id": "YL16",
+    "name_th": "ศรีอุดม",
+    "name_en": "Si Udom",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.676067255564982,
+    "long": 100.64609272217876
+  },
+  {
+    "id": "YL17",
+    "name_th": "ศรีเอี่ยม",
+    "name_en": "Si Iam",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.665961385103964,
+    "long": 100.64574707749745
+  },
+  {
+    "id": "YL18",
+    "name_th": "ศรีลาซาล",
+    "name_en": "Si La Salle",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.65528369362089,
+    "long": 100.6424247944874
+  },
+  {
+    "id": "YL19",
+    "name_th": "ศรีแบริ่ง",
+    "name_en": "Si Bearing",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.654951018837535,
+    "long": 100.64231843399914
+  },
+  {
+    "id": "YL20",
+    "name_th": "ศรีด่าน",
+    "name_en": "Si Dan",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.845105913535516,
+    "long": 100.65014705398384
+  },
+  {
+    "id": "YL21",
+    "name_th": "ศรีเทพา",
+    "name_en": "Si Thepha",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.629678117403055,
+    "long": 100.62273023889279
+  },
+  {
+    "id": "YL22",
+    "name_th": "ทิพวัล",
+    "name_en": "Thipphawan",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.636635703581005,
+    "long": 100.61020647462854
+  },
+  {
+    "id": "YL23",
+    "name_th": "สำโรง",
+    "name_en": "Samrong",
+    "type": 9,
+    "type_name": "สายสีเหลือง",
+    "have_parking": 0,
+    "lat": 13.64633918635251,
+    "long": 100.59567496079484
   }
 ]
