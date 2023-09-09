@@ -22,6 +22,7 @@ class MainActivityViewModel(
         get() = _uiStations
 
     fun getStationNearByLatLong(lat: Double, long: Double) {
+        println()
         viewModelScope.launch {
             val stations = withContext(coroutinesDispatcherProvider.io) {
                 getStationsUseCase.invoke(Unit).successOr(listOf())
