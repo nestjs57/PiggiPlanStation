@@ -36,11 +36,11 @@
             android:layout_height="20dp"
             android:layout_marginEnd="@dimen/space_larger"
             android:src="@drawable/ic_history"
+            android:visibility="gone"
             card_view:layout_constraintBottom_toBottomOf="@+id/tvLocationName"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintTop_toTopOf="@+id/tvLocationName"
-            card_view:tint="@color/opposite_primary"
-            android:visibility="gone"/>
+            card_view:tint="@color/opposite_primary" />
 
         <TextView
             android:id="@+id/tv_title"
@@ -72,10 +72,11 @@
             android:layout_height="0dp"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             card_view:cardBackgroundColor="@color/white"
             card_view:cardCornerRadius="10dp"
             card_view:cardElevation="0dp"
-            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintBottom_toTopOf="@+id/tv_last_update"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_title">
@@ -124,6 +125,22 @@
             </ViewFlipper>
 
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_last_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="@dimen/space_normal"
+            android:fontFamily="@font/db_heavent_now"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:paddingHorizontal="8dp"
+            android:text="อัปเดตข้อมูลล่าสุดเมื่อ 4 มิถุนายน 2566"
+            android:textColor="@color/black"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
