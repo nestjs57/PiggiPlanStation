@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">PiggiPlan Station</string>
+    <string name="app_name">ลงไหน</string>
+
+    <string name="reset_filter_type">รีเซ็ต</string>
+    <string name="view_only_bts">ดูเฉพาะ BTS</string>
+    <string name="view_only_mrt">ดูเฉพาะ MRT</string>
+    <string name="view_only_apl">ดูเฉพาะ แอร์พอร์ตเรลลิ้งค์</string>
+    <string name="view_only_srt">ดูเฉพาะ รถไฟฟ้าชานเมืองสายสีแดง</string>
+    <string name="select_location_for_search_nearest">เลือกสถานที่ เพื่อหาสถานีที่ใกล้ที่สุด …</string>
+    <string name="station_nearest_title">สถานีที่ใกล้ที่สุด :</string>
+    <string name="location_not_found_label">ไม่พบสถานีที่ค้นหา</string>
+    <string name="bts_label">BTS</string>
+    <string name="mrt_label">MRT</string>
+    <string name="apl_label">ARL</string>
+    <string name="bts_g_label">BTS-G</string>
+    <string name="srtet_label">SRTET</string>
 </resources>
