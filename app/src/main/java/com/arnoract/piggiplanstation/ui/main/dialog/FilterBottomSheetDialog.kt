@@ -1,6 +1,8 @@
 package com.arnoract.piggiplanstation.ui.main.dialog
 
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -60,6 +62,9 @@ class FilterBottomSheetDialog : BottomSheetDialogFragment() {
 
     private fun setUpView() {
         setState()
+        val content = SpannableString(getString(R.string.reset_filter_type))
+        content.setSpan(UnderlineSpan(), 0, content.length, 0)
+        binding.tvReset.text = content
         setOnClicked()
     }
 
@@ -93,18 +98,23 @@ class FilterBottomSheetDialog : BottomSheetDialogFragment() {
             null -> {
                 clearSelected()
             }
+
             TypeSelected.NONE -> {
                 clearSelected()
             }
+
             TypeSelected.BTS -> {
                 setStateViewOnlyBts()
             }
+
             TypeSelected.MRT -> {
                 setStateViewOnlyMrt()
             }
+
             TypeSelected.APL -> {
                 setStateViewOnlyApl()
             }
+
             TypeSelected.SRT -> {
                 setStateViewOnlySrt()
             }

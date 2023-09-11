@@ -19,13 +19,13 @@ class UiStationDiffCallback : DiffUtil.ItemCallback<UiStation>() {
         oldItem: UiStation,
         newItem: UiStation,
     ): Boolean {
-        return false
+        return oldItem == newItem
     }
 
     override fun areContentsTheSame(
         oldItem: UiStation,
         newItem: UiStation,
     ): Boolean {
-        return false
+        return oldItem == newItem
     }
 }

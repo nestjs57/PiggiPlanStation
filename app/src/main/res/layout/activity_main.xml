@@ -42,36 +42,128 @@
             card_view:layout_constraintTop_toTopOf="@+id/tvLocationName"
             card_view:tint="@color/opposite_primary" />
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/layout_near_me"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="@dimen/space_normal"
-            android:fontFamily="@font/db_heavent_now"
-            android:paddingHorizontal="8dp"
-            android:text="@string/station_nearest_title"
-            android:textColor="@color/gray700"
+            android:orientation="horizontal"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/tvLocationName" />
+            card_view:layout_constraintTop_toBottomOf="@+id/tvLocationName">
 
-        <ImageView
-            android:id="@+id/imv_filter"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginEnd="@dimen/space_larger"
-            android:src="@drawable/ic_filter_horizontal"
-            card_view:layout_constraintBottom_toBottomOf="@+id/tv_title"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintTop_toTopOf="@+id/tv_title" />
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/pin_blue"
+                card_view:layout_constraintBottom_toBottomOf="@+id/tv_title"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/db_heavent_now"
+                android:scrollHorizontally="true"
+                android:text="@string/station_near_me_label"
+                android:textColor="@color/gray700" />
+
+            <TextView
+                android:id="@+id/tv_title_near_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/db_heavent_now"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/gray700"
+                tools:text="BTS จตุจักร (200 m)" />
+
+            <ViewFlipper
+                android:id="@+id/viewFlipper_refresh_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imv_relocation"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_refresh"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/layout_near_me"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toTopOf="@+id/layout_near_me" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/blue_dark" />
+
+            </ViewFlipper>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/space_normal"
+            android:orientation="horizontal"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/layout_near_me">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/pin" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="-3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/db_heavent_now"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingHorizontal="8dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/station_nearest_title"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imv_filter"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_filter_horizontal"
+                card_view:layout_constraintBottom_toBottomOf="@+id/layout_location"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="@+id/layout_location" />
+        </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_inner"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             card_view:cardBackgroundColor="@color/white"
             card_view:cardCornerRadius="10dp"
@@ -79,7 +171,7 @@
             card_view:layout_constraintBottom_toTopOf="@+id/tv_last_update"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_title">
+            card_view:layout_constraintTop_toBottomOf="@+id/layout_location">
 
             <ViewFlipper
                 android:id="@+id/viewFlipper"
@@ -134,10 +226,10 @@
             android:layout_marginBottom="@dimen/space_normal"
             android:fontFamily="@font/db_heavent_now"
             android:gravity="center"
-            android:textSize="12sp"
             android:paddingHorizontal="8dp"
-            android:text="อัปเดตข้อมูลล่าสุดเมื่อ 4 มิถุนายน 2566"
+            android:text="อัปเดตข้อมูลล่าสุดเมื่อ 11 กันยายน 2566"
             android:textColor="@color/black"
+            android:textSize="12sp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent" />

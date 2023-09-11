@@ -9,9 +9,20 @@
     <string name="select_location_for_search_nearest">เลือกสถานที่ เพื่อหาสถานีที่ใกล้ที่สุด …</string>
     <string name="station_nearest_title">สถานีที่ใกล้ที่สุด :</string>
     <string name="location_not_found_label">ไม่พบสถานีที่ค้นหา</string>
-    <string name="bts_label">BTS</string>
-    <string name="mrt_label">MRT</string>
-    <string name="apl_label">ARL</string>
-    <string name="bts_g_label">BTS-G</string>
-    <string name="srtet_label">SRTET</string>
+    <string name="bts_code_label">BTS</string>
+    <string name="mrt_code_label">MRT</string>
+    <string name="apl_code_label">ARL</string>
+    <string name="bts_g_code_label">BTS-G</string>
+    <string name="srtet_code_label">SRTET</string>
+    <string name="prefix_name_bts_SKW_label">BTS สายสีเขียวสุขุมวิท</string>
+    <string name="prefix_name_bts_sl_label">BTS สายสีเขียวสีลม</string>
+    <string name="prefix_met_blue_label">MRT สายสีน้ำเงิน</string>
+    <string name="prefix_met_purple_label">MRT สายสีม่วง</string>
+    <string name="prefix_apl_label">แอร์พอร์ต เรล ลิงก์</string>
+    <string name="prefix_bts_g_label">BTS สายสีทอง</string>
+    <string name="prefix_srtet_label">รถไฟฟ้าสายสีแดง</string>
+    <string name="prefix_mrt_yellow">MRT สายสีเหลือง</string>
+    <string name="see_more_label">ดูเพิ่มเติม..</string>
+    <string name="list_of_nearby_station_label">รายชื่อสถานีใกล้ : %s</string>
+    <string name="station_near_me_label">สถานีใกล้ฉัน</string>
 </resources>
