@@ -24,5 +24,5 @@
     <string name="prefix_mrt_yellow">MRT สายสีเหลือง</string>
     <string name="see_more_label">ดูเพิ่มเติม..</string>
     <string name="list_of_nearby_station_label">รายชื่อสถานีใกล้ : %s</string>
-    <string name="station_near_me_label">สถานีใกล้ฉัน</string>
+    <string name="station_near_me_label">ใกล้ฉัน</string>
 </resources>

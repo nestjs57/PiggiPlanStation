@@ -70,7 +70,7 @@
                 android:fontFamily="@font/db_heavent_now"
                 android:scrollHorizontally="true"
                 android:text="@string/station_near_me_label"
-                android:textColor="@color/gray700" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/tv_title_near_me"
@@ -145,7 +145,7 @@
                 android:paddingHorizontal="8dp"
                 android:scrollHorizontally="true"
                 android:singleLine="true"
-                android:text="@string/station_nearest_title"
+                android:text="@string/location_not_found_label"
                 android:textColor="@color/black" />
 
             <ImageView
