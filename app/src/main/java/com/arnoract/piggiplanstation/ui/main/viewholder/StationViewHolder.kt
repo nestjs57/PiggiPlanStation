@@ -5,25 +5,35 @@ import android.view.ViewGroup
 import com.arnoract.piggiplanstation.R
 import com.arnoract.piggiplanstation.base.inflater
 import com.arnoract.piggiplanstation.base.recyclerview.ItemViewHolder
+import com.arnoract.piggiplanstation.core.setDebounceOnClickListener
 import com.arnoract.piggiplanstation.databinding.ViewItemStationBinding
+import com.arnoract.piggiplanstation.ui.main.adapter.StationAdapter
 import com.arnoract.piggiplanstation.ui.main.model.UiStation
 import com.arnoract.piggiplanstation.ui.main.model.UiType
 
 class StationViewHolder(
     private val binding: ViewItemStationBinding,
+    private val listener: StationAdapter.StationAdapterListener
 ) : ItemViewHolder<UiStation>(binding.root) {
 
     companion object {
         fun create(
             parent: ViewGroup,
+            listener: StationAdapter.StationAdapterListener,
         ): ItemViewHolder<UiStation> {
             return StationViewHolder(
                 ViewItemStationBinding.inflate(
                     parent.inflater(),
                     parent,
                     false
-                )
+                ), listener
             )
+        }
+    }
+
+    init {
+        binding.root.setDebounceOnClickListener {
+            listener.onClickStation()
         }
     }
 
@@ -43,6 +53,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_bts_sukhumvit_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.green_sukhumvit))
             }
+
             UiType.BTS_SL -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_bts)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_bts_srilom)
@@ -50,6 +61,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_bts_srilom_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.green_silom))
             }
+
             UiType.MRT_BLUE -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_mrt)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_mrt_blue_line)
@@ -57,6 +69,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_mrt_blue_line_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.blue_mrt))
             }
+
             UiType.MRT_PURPLE -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_mrt)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_mrt_purple_line)
@@ -64,6 +77,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_mrt_purple_line_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.purple_mrt))
             }
+
             UiType.APL -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_apl)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_apl)
@@ -71,6 +85,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_apl_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.pink_apl))
             }
+
             UiType.BTS_G -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_bts)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_bts_gold)
@@ -78,6 +93,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_bts_gold_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.gold_bts))
             }
+
             UiType.RED_NORMAL -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_srt)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_srtet_red)
@@ -85,6 +101,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_srtet_red_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.red_srt))
             }
+
             UiType.RED_WEAK -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_srt)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth)
@@ -92,6 +109,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.red_light_srt))
             }
+
             UiType.MRT_YELLOW -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_mrt_yellow)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_mrt_yellow)
@@ -99,6 +117,7 @@ class StationViewHolder(
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_mrt_yellow_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.yellow_mrt))
             }
+
             else -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_srt)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth)

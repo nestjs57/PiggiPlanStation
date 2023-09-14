@@ -68,6 +68,10 @@ class MainActivityViewModel(
     val isLoadingLocationNearMe: LiveData<Boolean>
         get() = _isLoadingLocationNearMe
 
+    private val _onClickStationEvent = MutableLiveData<Unit>()
+    val onClickStationEvent: LiveData<Unit>
+        get() = _onClickStationEvent
+
     init {
         viewModelScope.launch {
             _isEnableFilter.value = false
@@ -169,6 +173,10 @@ class MainActivityViewModel(
     fun onClickSeeMore() {
         _maxSizeData.value = _maxSizeData.value?.plus(5)
         setFilterType(_currentTypeSelected.value ?: TypeSelected.NONE)
+    }
+
+    fun onClickStation() {
+        _onClickStationEvent.value = Unit
     }
 
     fun setLocationNameSelected(value: String) {

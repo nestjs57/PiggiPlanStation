@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ลงไหน</string>
+    <string name="ads_app_id">ca-app-pub-9170460661148665~9420657819</string>
+    <string name="ads_unit_id">ca-app-pub-9170460661148665/7437174372</string>
 
     <string name="reset_filter_type">รีเซ็ต</string>
     <string name="view_only_bts">ดูเฉพาะ BTS</string>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground">
 
     <FrameLayout
         android:id="@+id/layout_station"
@@ -19,8 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="BTS"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            tools:text="BTS" />
     </FrameLayout>
 
     <TextView
@@ -31,12 +34,12 @@
         android:ellipsize="end"
         android:fontFamily="@font/db_heavent_now"
         android:maxLines="1"
-        android:text="พหลโยธิน 59"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/layout_station"
         app:layout_constraintEnd_toStartOf="@+id/img_logo"
         app:layout_constraintStart_toEndOf="@+id/layout_station"
-        app:layout_constraintTop_toTopOf="@+id/layout_station" />
+        app:layout_constraintTop_toTopOf="@+id/layout_station"
+        tools:text="พหลโยธิน 59" />
 
     <ImageView
         android:id="@+id/img_logo"
@@ -62,8 +65,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="N24"
-            android:textColor="@color/red_light_srt" />
+            android:textColor="@color/red_light_srt"
+            tools:text="N24" />
     </FrameLayout>
 
     <TextView
@@ -74,12 +77,12 @@
         android:ellipsize="end"
         android:fontFamily="@font/db_heavent_now"
         android:maxLines="1"
-        android:text="Phahol Yothin 59"
         android:textColor="@color/gray500"
         app:layout_constraintBottom_toBottomOf="@+id/layout_station_code"
         app:layout_constraintEnd_toStartOf="@+id/tv_distance"
         app:layout_constraintStart_toEndOf="@+id/layout_station_code"
-        app:layout_constraintTop_toTopOf="@+id/layout_station_code" />
+        app:layout_constraintTop_toTopOf="@+id/layout_station_code"
+        tools:text="Phahol Yothin 59" />
 
     <TextView
         android:id="@+id/tv_distance"
@@ -89,11 +92,11 @@
         android:ellipsize="end"
         android:fontFamily="@font/db_heavent_now"
         android:maxLines="1"
-        android:text="1.5 km"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/tv_station_name_en"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_station_name_en" />
+        app:layout_constraintTop_toTopOf="@+id/tv_station_name_en"
+        tools:text="1.5 km" />
 
     <View
         android:layout_width="match_parent"

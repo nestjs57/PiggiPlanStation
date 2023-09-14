@@ -7,12 +7,19 @@ import com.arnoract.piggiplanstation.ui.main.model.UiStation
 import com.arnoract.piggiplanstation.ui.main.model.UiStationDiffCallback
 import com.arnoract.piggiplanstation.ui.main.viewholder.StationViewHolder
 
-class StationAdapter :
+class StationAdapter(
+    val listener: StationAdapterListener
+) :
     ListAdapter<UiStation, ItemViewHolder<UiStation>>(
         UiStationDiffCallback()
     ) {
+
+    interface StationAdapterListener {
+        fun onClickStation()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder<UiStation> {
-        return StationViewHolder.create(parent)
+        return StationViewHolder.create(parent, listener)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder<UiStation>, position: Int) {

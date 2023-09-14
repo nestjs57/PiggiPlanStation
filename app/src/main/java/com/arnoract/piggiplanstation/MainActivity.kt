@@ -21,8 +21,10 @@ import com.arnoract.piggiplanstation.databinding.ActivityMainBinding
 import com.arnoract.piggiplanstation.ui.main.adapter.SeeMoreAdapter
 import com.arnoract.piggiplanstation.ui.main.adapter.StationAdapter
 import com.arnoract.piggiplanstation.ui.main.dialog.FilterBottomSheetDialog
+import com.arnoract.piggiplanstation.ui.main.dialog.MapOverViewBottomSheetDialog
 import com.arnoract.piggiplanstation.ui.main.model.UiSeeMore
 import com.arnoract.piggiplanstation.ui.main.model.UiType
+import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.libraries.places.api.model.Place
@@ -33,7 +35,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class MainActivity : BaseActivity<ActivityMainBinding>(),
-    FilterBottomSheetDialog.FilterBottomSheetDialogListener, SeeMoreAdapter.SeeMoreAdapterListener {
+    FilterBottomSheetDialog.FilterBottomSheetDialogListener, SeeMoreAdapter.SeeMoreAdapterListener,
+    StationAdapter.StationAdapterListener {
 
     override var layoutResource: Int = R.layout.activity_main
     private val mViewModel: MainActivityViewModel by viewModel()
@@ -74,11 +77,17 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
         setContentView(binding.root)
         setupRecyclerView()
         initView()
+        loadAds()
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
     }
 
+    private fun loadAds() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
+    }
+
     private fun setupRecyclerView() {
-        _mAdapter = StationAdapter()
+        _mAdapter = StationAdapter(this)
         _mSeeMoreAdapter = SeeMoreAdapter(this)
         binding.rcvStation.layoutManager = LinearLayoutManager(this)
         binding.rcvStation.adapter = ConcatAdapter(mAdapter, mSeeMoreAdapter)
@@ -157,6 +166,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
             FilterBottomSheetDialog.newInstance(it, this).show(
                 supportFragmentManager, FilterBottomSheetDialog::class.java.canonicalName
             )
+        }
+        mViewModel.onClickStationEvent.observe(this) {
+//            MapOverViewBottomSheetDialog.newInstance().show(
+//                supportFragmentManager, MapOverViewBottomSheetDialog::class.java.canonicalName
+//            )
         }
         mViewModel.isEnableFilter.observe(this) {
             binding.imvFilter.apply {
@@ -241,5 +255,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
 
     override fun onClickedSeeMore() {
         mViewModel.onClickSeeMore()
+    }
+
+    override fun onClickStation() {
+        mViewModel.onClickStation()
     }
 }
