@@ -8,14 +8,14 @@ import com.arnoract.piggiplanstation.ui.main.model.UiStationDiffCallback
 import com.arnoract.piggiplanstation.ui.main.viewholder.StationViewHolder
 
 class StationAdapter(
-    val listener: StationAdapterListener
+    private val listener: StationAdapterListener
 ) :
     ListAdapter<UiStation, ItemViewHolder<UiStation>>(
         UiStationDiffCallback()
     ) {
 
     interface StationAdapterListener {
-        fun onClickStation()
+        fun onClickStation(model : UiStation)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder<UiStation> {

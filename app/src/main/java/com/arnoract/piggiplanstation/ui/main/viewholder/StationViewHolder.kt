@@ -16,6 +16,8 @@ class StationViewHolder(
     private val listener: StationAdapter.StationAdapterListener
 ) : ItemViewHolder<UiStation>(binding.root) {
 
+    private var mData: UiStation? = null
+
     companion object {
         fun create(
             parent: ViewGroup,
@@ -23,9 +25,7 @@ class StationViewHolder(
         ): ItemViewHolder<UiStation> {
             return StationViewHolder(
                 ViewItemStationBinding.inflate(
-                    parent.inflater(),
-                    parent,
-                    false
+                    parent.inflater(), parent, false
                 ), listener
             )
         }
@@ -33,11 +33,12 @@ class StationViewHolder(
 
     init {
         binding.root.setDebounceOnClickListener {
-            listener.onClickStation()
+            mData?.let { it1 -> listener.onClickStation(it1) }
         }
     }
 
     override fun fillData(data: UiStation?, position: Int) {
+        mData = data
         binding.tvStationNameTh.text = data?.name_th
         binding.tvStationNameEn.text = data?.name_en
         binding.tvDistance.text = data?.distanceStr

@@ -10,6 +10,7 @@ import com.arnoract.piggiplanstation.domain.main.FindShortestPathUseCase
 import com.arnoract.piggiplanstation.domain.main.GetStationsUseCase
 import com.arnoract.piggiplanstation.domain.model.main.Station
 import com.arnoract.piggiplanstation.ui.main.dialog.FilterBottomSheetDialog.TypeSelected
+import com.arnoract.piggiplanstation.ui.main.dialog.model.UiOverview
 import com.arnoract.piggiplanstation.ui.main.mapper.StationToUiStationMapper
 import com.arnoract.piggiplanstation.ui.main.model.UiStation
 import com.arnoract.piggiplanstation.ui.main.model.UiType
@@ -67,8 +68,8 @@ class MainActivityViewModel(
     val isLoadingLocationNearMe: LiveData<Boolean>
         get() = _isLoadingLocationNearMe
 
-    private val _onClickStationEvent = MutableLiveData<Unit>()
-    val onClickStationEvent: LiveData<Unit>
+    private val _onClickStationEvent = MutableLiveData<UiOverview>()
+    val onClickStationEvent: LiveData<UiOverview>
         get() = _onClickStationEvent
 
     init {
@@ -79,13 +80,6 @@ class MainActivityViewModel(
             }
             _stations.value = stations
             _checkPermissionEvent.value = Unit
-
-            withContext(coroutinesDispatcherProvider.io) {
-                findShortestPathUseCase.invoke(FindShortestPathUseCase.Params(
-                    startStationId = "1" ,
-                    endStationId = "1"
-                )).successOr(listOf())
-            }
         }
     }
 
@@ -181,8 +175,26 @@ class MainActivityViewModel(
         setFilterType(_currentTypeSelected.value ?: TypeSelected.NONE)
     }
 
-    fun onClickStation() {
-        _onClickStationEvent.value = Unit
+    fun onClickStation(data: UiStation) {
+        viewModelScope.launch {
+            val start = _stationNearMe.value?.id
+            val end = data.id
+            val result = withContext(coroutinesDispatcherProvider.io) {
+                findShortestPathUseCase.invoke(
+                    FindShortestPathUseCase.Params(
+                        startStationId = start ?: "", endStationId = end
+                    )
+                ).successOr(listOf())
+            }
+            _onClickStationEvent.value = UiOverview(
+                locationToGo = _locationName.value ?: "",
+                startStation = _stationNearMe.value,
+                distanceBetweenCurrentAndStartStation = _stationNearMe.value?.distanceStr ?: "",
+                endStation = data,
+                distanceBetweenLastStationAndDestinationLocation = data.distanceStr,
+                routes = result,
+            )
+        }
     }
 
     fun setLocationNameSelected(value: String) {

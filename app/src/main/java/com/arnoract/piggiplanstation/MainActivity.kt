@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.PorterDuff
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
@@ -17,13 +16,12 @@ import com.arnoract.piggiplanstation.base.BaseActivity
 import com.arnoract.piggiplanstation.core.setDebounceOnClickListener
 import com.arnoract.piggiplanstation.core.toast
 import com.arnoract.piggiplanstation.databinding.ActivityMainBinding
-import com.arnoract.piggiplanstation.domain.main.FindShortestPathUseCase
-import com.arnoract.piggiplanstation.domain.model.main.RouteConnection
-import com.arnoract.piggiplanstation.domain.model.main.RouteStation
 import com.arnoract.piggiplanstation.ui.main.adapter.SeeMoreAdapter
 import com.arnoract.piggiplanstation.ui.main.adapter.StationAdapter
 import com.arnoract.piggiplanstation.ui.main.dialog.FilterBottomSheetDialog
+import com.arnoract.piggiplanstation.ui.main.dialog.MapOverViewBottomSheetDialog
 import com.arnoract.piggiplanstation.ui.main.model.UiSeeMore
+import com.arnoract.piggiplanstation.ui.main.model.UiStation
 import com.arnoract.piggiplanstation.ui.main.model.UiType
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -169,9 +167,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
             )
         }
         mViewModel.onClickStationEvent.observe(this) {
-//            MapOverViewBottomSheetDialog.newInstance().show(
-//                supportFragmentManager, MapOverViewBottomSheetDialog::class.java.canonicalName
-//            )
+            MapOverViewBottomSheetDialog.newInstance(it).show(
+                supportFragmentManager, MapOverViewBottomSheetDialog::class.java.canonicalName
+            )
         }
         mViewModel.isEnableFilter.observe(this) {
             binding.imvFilter.apply {
@@ -237,9 +235,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
     }
 
     override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
+        requestCode: Int, permissions: Array<out String>, grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
@@ -258,7 +254,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
         mViewModel.onClickSeeMore()
     }
 
-    override fun onClickStation() {
-        mViewModel.onClickStation()
+    override fun onClickStation(data: UiStation) {
+        mViewModel.onClickStation(data)
     }
 }

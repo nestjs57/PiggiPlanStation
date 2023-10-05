@@ -23,7 +23,7 @@ class StationRepositoryImpl(
     override suspend fun getBtsSkw(): MutableList<Station> {
         lateinit var jsonString: String
         try {
-            jsonString = context.assets.open("skv.json").bufferedReader().use { it.readText() }
+            jsonString = context.assets.open("skw.json").bufferedReader().use { it.readText() }
         } catch (ioException: IOException) {
 
         }

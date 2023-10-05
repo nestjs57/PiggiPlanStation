@@ -1,6 +1,5 @@
 package com.arnoract.piggiplanstation.domain.main
 
-import android.util.Log
 import com.arnoract.piggiplanstation.core.UseCase
 import com.arnoract.piggiplanstation.domain.model.main.RouteConnection
 import com.arnoract.piggiplanstation.domain.model.main.RouteStation
@@ -99,10 +98,8 @@ class FindShortestPathUseCase(
         val redWeak = stationRepository.getRedWeak().map { mapRouteStation(it) }
         connectStations(redWeak)
 
-        val systemRoute =
+        val systemRoutes =
             btsSkw + btsSl + mrtBlue + mrtPurple + apl + mrtYellow + redNormal + redWeak
-
-        Log.d("testest", systemRoute.size.toString())
 
         val connectionMaps = ConnectionMap(
             skwConnections = mapOf(
@@ -189,10 +186,10 @@ class FindShortestPathUseCase(
             mapOf("BL11" to mrtBlue, "PP15" to mrtPurple)
         )
 
-        val path =
-            findShortestPath(redWeak.first { it.id == "RW05" }, mrtPurple.first { it.id == "PP13" })
-        Log.d("testest", path.joinToString(" -> ") { it.id })
-        return listOf()
+        val startStation = systemRoutes.first { it.id == parameters.startStationId }
+        val endStation = systemRoutes.first { it.id == parameters.endStationId }
+
+        return findShortestPath(startStation, endStation)
     }
 
     data class Params(val startStationId: String, val endStationId: String)

@@ -7,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="blue_light">#F9FAFF</color>
     <color name="blue_dark">#365EA1</color>
+    <color name="blue_pin">#1081E0</color>
+    <color name="red_pin">#DD352E</color>
     <color name="black">#232729</color>
     <color name="black_transparent">#61232729</color>
     <color name="gray700">#76797A</color>
