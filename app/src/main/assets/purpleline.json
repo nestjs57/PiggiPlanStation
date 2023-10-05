@@ -1,0 +1,162 @@
+[
+  {
+    "id": "PP01",
+    "name_th": "คลองบางไผ่",
+    "name_en": "Khlong Bang Phai",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.89239266,
+    "long": 100.4083018
+  },
+  {
+    "id": "PP02",
+    "name_th": "ตลาดบางใหญ่",
+    "name_en": "Talad Bang Yai",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.88113287,
+    "long": 100.4092427
+  },
+  {
+    "id": "PP03",
+    "name_th": "สามแยกบางใหญ่",
+    "name_en": "Sam Yaek Bang Yai",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87479847,
+    "long": 100.4195137
+  },
+  {
+    "id": "PP04",
+    "name_th": "บางพลู",
+    "name_en": "Bang Phlu",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87573246,
+    "long": 100.4339222
+  },
+  {
+    "id": "PP05",
+    "name_th": "บางรักใหญ่",
+    "name_en": "Bang Rak Yai",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87665442,
+    "long": 100.4448834
+  },
+  {
+    "id": "PP06",
+    "name_th": "บางรักน้อย-ท่าอิฐ",
+    "name_en": "Bang Rak Noi Tha It",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87483106,
+    "long": 100.4560521
+  },
+  {
+    "id": "PP07",
+    "name_th": "ไทรม้า",
+    "name_en": "Sai Ma",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87051515,
+    "long": 100.4666388
+  },
+  {
+    "id": "PP08",
+    "name_th": "สะพานพระนั่งเกล้า",
+    "name_en": "Phra Nang Klao Bridge",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.87035425,
+    "long": 100.4803503
+  },
+  {
+    "id": "PP09",
+    "name_th": "แยกนนทบุรี 1",
+    "name_en": "Yaek Nonthaburi 1",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.86603268,
+    "long": 100.494037
+  },
+  {
+    "id": "PP10",
+    "name_th": "บางกระสอ",
+    "name_en": "Bang Krasor",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.86174012,
+    "long": 100.5044639
+  },
+  {
+    "id": "PP11",
+    "name_th": "ศูนย์ราชการนนทบุรี",
+    "name_en": "Nonthaburi Civic Center",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.86019043,
+    "long": 100.5132546
+  },
+  {
+    "id": "PP12",
+    "name_th": "กระทรวงสาธารณสุข",
+    "name_en": "Ministry of Public Health",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.84859228,
+    "long": 100.5147667
+  },
+  {
+    "id": "PP13",
+    "name_th": "แยกติวานนท์",
+    "name_en": "Yaek Tiwanon",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.83967809,
+    "long": 100.514838
+  },
+  {
+    "id": "PP14",
+    "name_th": "วงศ์สว่าง",
+    "name_en": "Wong Sawang",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.82918159,
+    "long": 100.5273741
+  },
+  {
+    "id": "PP15",
+    "name_th": "บางซ่อน",
+    "name_en": "Bang Son",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.82022292,
+    "long": 100.5325447
+  },
+  {
+    "id": "PP16",
+    "name_th": "เตาปูน",
+    "name_en": "Tao Poon",
+    "type": 4,
+    "type_name": "สายสีม่วง",
+    "have_parking": 0,
+    "lat": 13.8061343,
+    "long": 100.5307564
+  }
+]

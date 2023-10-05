@@ -1,7 +1,6 @@
 package com.arnoract.piggiplanstation
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -18,10 +17,12 @@ import com.arnoract.piggiplanstation.base.BaseActivity
 import com.arnoract.piggiplanstation.core.setDebounceOnClickListener
 import com.arnoract.piggiplanstation.core.toast
 import com.arnoract.piggiplanstation.databinding.ActivityMainBinding
+import com.arnoract.piggiplanstation.domain.main.FindShortestPathUseCase
+import com.arnoract.piggiplanstation.domain.model.main.RouteConnection
+import com.arnoract.piggiplanstation.domain.model.main.RouteStation
 import com.arnoract.piggiplanstation.ui.main.adapter.SeeMoreAdapter
 import com.arnoract.piggiplanstation.ui.main.adapter.StationAdapter
 import com.arnoract.piggiplanstation.ui.main.dialog.FilterBottomSheetDialog
-import com.arnoract.piggiplanstation.ui.main.dialog.MapOverViewBottomSheetDialog
 import com.arnoract.piggiplanstation.ui.main.model.UiSeeMore
 import com.arnoract.piggiplanstation.ui.main.model.UiType
 import com.google.android.gms.ads.AdRequest

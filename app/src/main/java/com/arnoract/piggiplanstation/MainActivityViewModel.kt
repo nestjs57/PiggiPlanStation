@@ -1,26 +1,25 @@
 package com.arnoract.piggiplanstation
 
-import android.location.Location
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.arnoract.piggiplanstation.core.CoroutinesDispatcherProvider
 import com.arnoract.piggiplanstation.core.successOr
+import com.arnoract.piggiplanstation.domain.main.FindShortestPathUseCase
 import com.arnoract.piggiplanstation.domain.main.GetStationsUseCase
 import com.arnoract.piggiplanstation.domain.model.main.Station
 import com.arnoract.piggiplanstation.ui.main.dialog.FilterBottomSheetDialog.TypeSelected
 import com.arnoract.piggiplanstation.ui.main.mapper.StationToUiStationMapper
 import com.arnoract.piggiplanstation.ui.main.model.UiStation
 import com.arnoract.piggiplanstation.ui.main.model.UiType
-import com.arnoract.piggiplanstation.util.getDistanceMeter
-import dagger.internal.SingleCheck
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainActivityViewModel(
     private val getStationsUseCase: GetStationsUseCase,
+    private val findShortestPathUseCase: FindShortestPathUseCase,
     private val coroutinesDispatcherProvider: CoroutinesDispatcherProvider
 ) : ViewModel() {
 
@@ -80,6 +79,13 @@ class MainActivityViewModel(
             }
             _stations.value = stations
             _checkPermissionEvent.value = Unit
+
+            withContext(coroutinesDispatcherProvider.io) {
+                findShortestPathUseCase.invoke(FindShortestPathUseCase.Params(
+                    startStationId = "1" ,
+                    endStationId = "1"
+                )).successOr(listOf())
+            }
         }
     }
 

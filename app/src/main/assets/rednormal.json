@@ -1,0 +1,102 @@
+[
+  {
+    "id": "RN01",
+    "name_th": "บางซื่่อ",
+    "name_en": "Bangsue",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.80368428,
+    "long": 100.5421718
+  },
+  {
+    "id": "RN02",
+    "name_th": "จตุจักร",
+    "name_en": "Chatuchak",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.82652411,
+    "long": 100.5494138
+  },
+  {
+    "id": "RN03",
+    "name_th": "วัดเสมียนนารี",
+    "name_en": "Wat Samian Nari",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.84165713,
+    "long": 100.5575235
+  },
+  {
+    "id": "RN04",
+    "name_th": "บางเขน",
+    "name_en": "Bang Khen",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.84699582,
+    "long": 100.5607304
+  },
+  {
+    "id": "RN05",
+    "name_th": "ทุ่งสองห้อง",
+    "name_en": "Thung Song Hong",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.86011093,
+    "long": 100.5675306
+  },
+  {
+    "id": "RN06",
+    "name_th": "หลักสี่",
+    "name_en": "Lak Si",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.88623335,
+    "long": 100.5818612
+  },
+  {
+    "id": "RN07",
+    "name_th": "การเคหะ",
+    "name_en": "Kan Kheha",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.89839916,
+    "long": 100.588838
+  },
+  {
+    "id": "RN08",
+    "name_th": "ดอนเมือง",
+    "name_en": "Don Muang",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.91502415,
+    "long": 100.5979874
+  },
+  {
+    "id": "RN09",
+    "name_th": "หลักหก",
+    "name_en": "Lak Hok",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.96585427,
+    "long": 100.60552
+  },
+  {
+    "id": "RN10",
+    "name_th": "รังสิต",
+    "name_en": "Rangsit",
+    "type": 7,
+    "type_name": "สายสีแดงเข้ม",
+    "have_parking": 0,
+    "lat": 13.99051349,
+    "long": 100.6022656
+  }
+]

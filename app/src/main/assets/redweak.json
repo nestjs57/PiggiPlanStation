@@ -1,0 +1,42 @@
+[
+  {
+    "id": "RW01",
+    "name_th": "บางซื่อ",
+    "name_en": "Bangsue",
+    "type": 8,
+    "type_name": "สายสีแดงอ่อน",
+    "have_parking": 0,
+    "lat": 13.80374382,
+    "long": 100.5421808
+  },
+  {
+    "id": "RW02",
+    "name_th": "บางซ่อน",
+    "name_en": "Bangson",
+    "type": 8,
+    "type_name": "สายสีแดงอ่อน",
+    "have_parking": 0,
+    "lat": 13.82204316,
+    "long": 100.5341984
+  },
+  {
+    "id": "RW05",
+    "name_th": "บางบำหรุ",
+    "name_en": "Bang Bamru",
+    "type": 8,
+    "type_name": "สายสีแดงอ่อน",
+    "have_parking": 0,
+    "lat": 13.7916979,
+    "long": 100.477956
+  },
+  {
+    "id": "RW06",
+    "name_th": "ตลิ่งชัน",
+    "name_en": "Taling Chan",
+    "type": 8,
+    "type_name": "สายสีแดงอ่อน",
+    "have_parking": 0,
+    "lat": 13.789346,
+    "long": 100.4399909
+  }
+]

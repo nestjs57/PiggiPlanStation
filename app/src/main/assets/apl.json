@@ -1,0 +1,82 @@
+[
+  {
+    "id": "A1",
+    "name_th": "สุวรรณภูมิ",
+    "name_en": "Suvarnabhumi",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.69814918,
+    "long": 100.7522164
+  },
+  {
+    "id": "A2",
+    "name_th": "ลาดกระบัง",
+    "name_en": "Lat Krabang",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.72783986,
+    "long": 100.7485788
+  },
+  {
+    "id": "A3",
+    "name_th": "บ้านทับช้าง",
+    "name_en": "Ban Thap Chang",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.73280954,
+    "long": 100.6912264
+  },
+  {
+    "id": "A4",
+    "name_th": "หัวหมาก",
+    "name_en": "Hua Mak",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.73820475,
+    "long": 100.6451844
+  },
+  {
+    "id": "A5",
+    "name_th": "รามคำแหง",
+    "name_en": "Ramkhamhaeng",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.74281633,
+    "long": 100.6000064
+  },
+  {
+    "id": "A6",
+    "name_th": "มักกะสัน",
+    "name_en": "Makkasan",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.75083941,
+    "long": 100.5612982
+  },
+  {
+    "id": "A7",
+    "name_th": "ราชปรารภ",
+    "name_en": "Ratchaprarop",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.75497477,
+    "long": 100.5421239
+  },
+  {
+    "id": "A8",
+    "name_th": "พญาไท",
+    "name_en": "Phaya Thai",
+    "type": 5,
+    "type_name": "แอร์พอร์ต เรล ลิงก์",
+    "have_parking": 0,
+    "lat": 13.75673912,
+    "long": 100.5348285
+  }
+]

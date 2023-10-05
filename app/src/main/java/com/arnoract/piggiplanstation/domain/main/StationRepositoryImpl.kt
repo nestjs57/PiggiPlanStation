@@ -12,9 +12,97 @@ class StationRepositoryImpl(
     override suspend fun getStations(): MutableList<Station> {
         lateinit var jsonString: String
         try {
-            jsonString = context.assets.open("csvjson.json")
-                .bufferedReader()
-                .use { it.readText() }
+            jsonString = context.assets.open("csvjson.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
+    override suspend fun getBtsSkw(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString = context.assets.open("skv.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
+    override suspend fun getBtsSl(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString = context.assets.open("sl.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
+    override suspend fun getMrtBlue(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString = context.assets.open("blueline.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
+    override suspend fun getMrtPurple(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString =
+                context.assets.open("purpleline.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
+    override suspend fun getApl(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString = context.assets.open("apl.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
+    override suspend fun getMrtYellow(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString = context.assets.open("yellow.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
+    override suspend fun getRedNormal(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString =
+                context.assets.open("rednormal.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
+    override suspend fun getRedWeak(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString = context.assets.open("redweak.json").bufferedReader().use { it.readText() }
         } catch (ioException: IOException) {
 
         }
