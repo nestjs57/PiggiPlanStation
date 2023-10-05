@@ -12,10 +12,14 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -111,6 +115,7 @@ class MapOverViewBottomSheetDialog : BottomSheetDialogFragment() {
 
     @Composable
     fun Content() {
+        val newData = uiOverview?.routes?.groupBy { it.type }
         val customFontFamily = FontFamily(
             Font(R.font.db_heavent_now, FontWeight.Normal),
         )
@@ -149,34 +154,25 @@ class MapOverViewBottomSheetDialog : BottomSheetDialogFragment() {
                         )
                     }
                 }
+
             }
-            items(uiOverview?.routes?.size ?: 0) {
-                val data = uiOverview?.routes?.get(it)
-                val isLastItem = it == uiOverview?.routes?.size?.minus(1)
-                ItemRoute(data, isLastItem)
-            }
-            item {
-                Column {
-                    Row(
-                        modifier = Modifier.padding(start = 7.dp, top = 0.dp, bottom = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Box(
-                            modifier = Modifier
-                                .padding(end = 8.dp)
-                                .background(
-                                    colorResource(id = R.color.red_pin),
-                                    shape = RoundedCornerShape(16.dp)
-                                )
-                                .width(6.dp)
-                                .height(56.dp)
-                        )
-                        Text(
-                            fontFamily = customFontFamily,
-                            color = colorResource(id = R.color.gray700),
-                            text = "ห่างจาก ${uiOverview?.locationToGo} : ${uiOverview?.distanceBetweenLastStationAndDestinationLocation ?: ""}"
-                        )
+
+            val resultPairs: List<Pair<RouteStation, List<RouteStation>>> =
+                newData?.values?.map { stationsOfType ->
+                    val firstStation = stationsOfType.firstOrNull()
+                    if (firstStation != null) {
+                        Pair(firstStation, stationsOfType.drop(1))
+                    } else {
+                        Pair(RouteStation("", "", 0, ""), emptyList())
                     }
+                } ?: listOf()
+
+            items(resultPairs.size) {
+                ItemRoute(data = resultPairs[it], isLastItem = false)
+            }
+
+            item {
+                Column(modifier = Modifier.padding(top = 8.dp)) {
                     Row {
                         Image(
                             painter = painterResource(id = R.drawable.pin),
@@ -194,8 +190,13 @@ class MapOverViewBottomSheetDialog : BottomSheetDialogFragment() {
 }
 
 @Composable
-fun ItemRoute(data: RouteStation?, isLastItem: Boolean) {
-    val icon = when (TypeToUiTypeMapper.map(data?.type ?: 0)) {
+fun ItemRoute(data: Pair<RouteStation, List<RouteStation>>, isLastItem: Boolean) {
+
+    val customFontFamily = FontFamily(
+        Font(R.font.db_heavent_now, FontWeight.Normal),
+    )
+
+    val icon = when (TypeToUiTypeMapper.map(data.first?.type ?: 0)) {
         UiType.BTS_SKW -> R.drawable.icon_bts
         UiType.BTS_SL -> R.drawable.icon_bts
         UiType.MRT_BLUE -> R.drawable.icon_mrt
@@ -206,7 +207,25 @@ fun ItemRoute(data: RouteStation?, isLastItem: Boolean) {
         UiType.RED_WEAK -> R.drawable.icon_srt
         UiType.MRT_YELLOW -> R.drawable.icon_mrt_yellow
     }
-    val lineColor = when (TypeToUiTypeMapper.map(data?.type ?: 0)) {
+
+    Column {
+        Row(modifier = Modifier.padding(vertical = 4.dp)) {
+//            CircleExample()
+            Image(
+                painter = painterResource(id = icon),
+                modifier = Modifier.size(20.dp),
+                contentDescription = "View more"
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(
+                color = colorResource(id = R.color.black),
+                fontFamily = customFontFamily,
+                text = data.first.nameTh
+            )
+        }
+    }
+
+    val lineColor = when (TypeToUiTypeMapper.map(data.first.type)) {
         UiType.BTS_SKW -> R.color.green_sukhumvit
         UiType.BTS_SL -> R.color.green_silom
         UiType.MRT_BLUE -> R.color.blue_mrt
@@ -218,50 +237,52 @@ fun ItemRoute(data: RouteStation?, isLastItem: Boolean) {
         UiType.MRT_YELLOW -> R.color.yellow_mrt
     }
 
-    val fontColor = when (TypeToUiTypeMapper.map(data?.type ?: 0)) {
-        UiType.BTS_SKW -> R.color.green_sukhumvit
-        UiType.BTS_SL -> R.color.green_silom
-        UiType.MRT_BLUE -> R.color.blue_mrt
-        UiType.MRT_PURPLE -> R.color.purple_mrt
-        UiType.APL -> R.color.pink_apl
-        UiType.BTS_G -> R.color.gold_bts
-        UiType.RED_NORMAL -> R.color.red_srt
-        UiType.RED_WEAK -> R.color.red_light_srt
-        UiType.MRT_YELLOW -> R.color.black
-    }
+    Column(Modifier.wrapContentHeight()) {
+        Row(
+            modifier = Modifier.padding(start = 7.dp, top = 2.dp, bottom = 2.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .wrapContentWidth()
+                    .fillMaxHeight()
+                    .padding(end = 8.dp)
+                    .background(
+                        colorResource(id = lineColor), shape = RoundedCornerShape(16.dp)
+                    )
+                    .padding(bottom = 8.dp, top = 8.dp)
 
-    val customFontFamily = FontFamily(
-        Font(R.font.db_heavent_now, FontWeight.Normal),
-    )
-    Column {
-        Row(modifier = Modifier.padding(vertical = 4.dp)) {
-            Image(
-                painter = painterResource(id = icon),
-                modifier = Modifier.size(20.dp),
-                contentDescription = "View more"
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                color = colorResource(id = fontColor),
-                fontFamily = customFontFamily,
-                text = "${data?.nameTh}"
-            )
-
-        }
-        if (!isLastItem) {
-            Row(
-                modifier = Modifier.padding(start = 7.dp, top = 2.dp, bottom = 2.dp),
-                verticalAlignment = Alignment.CenterVertically
             ) {
+                val formattedString = if (data.second.isEmpty()) {
+                    "a"
+                } else {
+                    data.second.map {
+                        "a"
+                    }.joinToString("\n") { it }
+                }
+                Text(
+                    modifier = Modifier.fillMaxHeight(),
+                    color = colorResource(lineColor),
+                    fontFamily = customFontFamily,
+                    text = formattedString
+                )
+            }
+            if (data.second.isNotEmpty()) {
                 Box(
                     modifier = Modifier
-                        .padding(end = 8.dp)
                         .background(
-                            colorResource(id = lineColor), shape = RoundedCornerShape(16.dp)
+                            colorResource(id = R.color.gray100), shape = RoundedCornerShape(8.dp)
                         )
-                        .width(6.dp)
-                        .height(28.dp)
-                )
+                        .padding(8.dp)
+                ) {
+                    val formattedString = data.second.joinToString("\n") { it.nameTh.trim() }
+                    Text(
+                        modifier = Modifier.fillMaxHeight(), // Set the Text to fill the available height
+                        color = colorResource(id = R.color.black),
+                        fontFamily = customFontFamily,
+                        text = formattedString
+                    )
+                }
             }
         }
     }
