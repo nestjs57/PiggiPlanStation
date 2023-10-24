@@ -2916,36 +2916,6 @@
     "long": 100.5348285
   },
   {
-    "id": "G1",
-    "name_th": "กรุงธนบุุรี",
-    "name_en": "Krung Thonburi",
-    "type": 6,
-    "type_name": "สายสีทอง",
-    "have_parking": 0,
-    "lat": 13.72111157,
-    "long": 100.5036768
-  },
-  {
-    "id": "G2",
-    "name_th": "เจริญนคร",
-    "name_en": "Charoen Nakorn",
-    "type": 6,
-    "type_name": "สายสีทอง",
-    "have_parking": 0,
-    "lat": 13.72647562,
-    "long": 100.509006
-  },
-  {
-    "id": "G3",
-    "name_th": "คลองสาน",
-    "name_en": "Khlong San",
-    "type": 6,
-    "type_name": "สายสีทอง",
-    "have_parking": 0,
-    "lat": 13.73038421,
-    "long": 100.5076567
-  },
-  {
     "id": "RN01",
     "name_th": "บางซื่่อ",
     "name_en": "Bangsue",

@@ -44,6 +44,8 @@ class StationViewHolder(
         binding.tvDistance.text = data?.distanceStr
         binding.tvStationCode.text = data?.id
 
+        binding.badge.visibility = if (position == 0) View.VISIBLE else View.GONE
+
         binding.tvDistance.visibility =
             if (data?.isShowDistance == true) View.VISIBLE else View.INVISIBLE
         when (data?.type) {
@@ -53,6 +55,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.bts_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_bts_sukhumvit_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.green_sukhumvit))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.green_sukhumvit))
             }
 
             UiType.BTS_SL -> {
@@ -61,6 +64,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.bts_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_bts_srilom_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.green_silom))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.green_silom))
             }
 
             UiType.MRT_BLUE -> {
@@ -69,6 +73,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.mrt_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_mrt_blue_line_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.blue_mrt))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.blue_mrt))
             }
 
             UiType.MRT_PURPLE -> {
@@ -77,6 +82,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.mrt_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_mrt_purple_line_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.purple_mrt))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.purple_mrt))
             }
 
             UiType.APL -> {
@@ -85,6 +91,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.apl_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_apl_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.pink_apl))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.pink_apl))
             }
 
             UiType.BTS_G -> {
@@ -93,6 +100,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.bts_g_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_bts_gold_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.gold_bts))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.gold_bts))
             }
 
             UiType.RED_NORMAL -> {
@@ -101,6 +109,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.srtet_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_srtet_red_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.red_srt))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.red_srt))
             }
 
             UiType.RED_WEAK -> {
@@ -109,6 +118,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.srtet_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.red_light_srt))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.red_light_srt))
             }
 
             UiType.MRT_YELLOW -> {
@@ -117,6 +127,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.mrt_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_mrt_yellow_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.yellow_mrt))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.yellow_mrt))
             }
 
             else -> {
@@ -125,6 +136,7 @@ class StationViewHolder(
                 binding.tvStation.text = context.getString(R.string.srtet_code_label)
                 binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth_stroke)
                 binding.tvStationCode.setTextColor(context.getColor(R.color.red_light_srt))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.red_light_srt))
             }
         }
     }

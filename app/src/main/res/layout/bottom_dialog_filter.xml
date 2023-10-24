@@ -23,7 +23,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:fontFamily="@font/db_heavent_now"
+                android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/reset_filter_type"
                 android:textColor="@color/black"
@@ -58,7 +58,7 @@
                 android:layout_marginStart="@dimen/space_normal"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:fontFamily="@font/db_heavent_now"
+                android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/view_only_bts"
                 android:textColor="@color/black" />
@@ -94,7 +94,7 @@
                 android:layout_marginStart="@dimen/space_normal"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:fontFamily="@font/db_heavent_now"
+                android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/view_only_mrt"
                 android:textColor="@color/black" />
@@ -130,7 +130,7 @@
                 android:layout_marginStart="@dimen/space_normal"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:fontFamily="@font/db_heavent_now"
+                android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/view_only_apl"
                 android:textColor="@color/black" />
@@ -166,7 +166,7 @@
                 android:layout_marginStart="@dimen/space_normal"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:fontFamily="@font/db_heavent_now"
+                android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/view_only_srt"
                 android:textColor="@color/black" />
@@ -191,7 +191,7 @@
             android:layout_marginTop="@dimen/space_larger"
             android:background="@drawable/bg_white_corner_10dp"
             android:backgroundTint="@color/primary"
-            android:fontFamily="@font/db_heavent_now"
+            android:fontFamily="@font/mn_paethai_bystorylog_regular"
             android:text="ยืนยัน"
             android:textColor="@color/white"
             android:textSize="16sp"

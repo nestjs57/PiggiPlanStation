@@ -48,8 +48,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
     private var materialAlertDialogBuilder: MaterialAlertDialogBuilder? = null
     private var dialog: AlertDialog? = null
 
-    private lateinit var fusedLocationClient: FusedLocationProviderClient
-
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1001
     }
@@ -77,7 +75,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
         setupRecyclerView()
         initView()
         loadAds()
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
     }
 
     private fun loadAds() {
@@ -219,18 +216,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
             ) != PackageManager.PERMISSION_GRANTED
         ) {
             return
-        }
-        fusedLocationClient.lastLocation.addOnSuccessListener { location ->
-            if (location != null) {
-                val latitude = location.latitude
-                val longitude = location.longitude
-                mViewModel.findStationNearMe(latitude, longitude)
-            } else {
-                toast("location not found.")
-                binding.tvTitleNearMe.text = "-"
-            }
-        }.addOnFailureListener {
-            toast(it.message ?: "")
         }
     }
 

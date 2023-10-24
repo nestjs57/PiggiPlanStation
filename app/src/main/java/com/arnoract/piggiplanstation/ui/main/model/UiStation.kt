@@ -11,7 +11,8 @@ data class UiStation(
     val have_parking: Int,
     val distance: Double,
     val distanceStr: String,
-    val isShowDistance: Boolean? = true
+    val isShowDistance: Boolean? = true ,
+    val position : Int = 0
 )
 
 class UiStationDiffCallback : DiffUtil.ItemCallback<UiStation>() {

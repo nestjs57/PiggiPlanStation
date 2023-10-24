@@ -3,107 +3,136 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:layout_height="wrap_content"
-    android:foreground="?attr/selectableItemBackground">
+    android:layout_marginBottom="@dimen/space_normal_12dp">
 
     <FrameLayout
-        android:id="@+id/layout_station"
-        android:layout_width="65dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/space_normal_12dp"
-        android:background="@drawable/ic_bg_apl"
-        android:paddingVertical="@dimen/space_smaller"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/badge"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/green_silom"
+        app:layout_constraintStart_toStartOf="@+id/cc_layout"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tv_station"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/space_normal"
+            android:ellipsize="end"
+            android:fontFamily="@font/mn_paethai_bystorylog_regular"
+            android:maxLines="1"
+            android:text="ใกล้สุด"
             android:textColor="@color/white"
-            tools:text="BTS" />
+            app:layout_constraintBottom_toBottomOf="@+id/layout_station"
+            app:layout_constraintEnd_toStartOf="@+id/img_logo"
+            app:layout_constraintStart_toEndOf="@+id/layout_station"
+            app:layout_constraintTop_toTopOf="@+id/layout_station" />
+
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/tv_station_name_th"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/space_normal"
-        android:ellipsize="end"
-        android:fontFamily="@font/db_heavent_now"
-        android:maxLines="1"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/layout_station"
-        app:layout_constraintEnd_toStartOf="@+id/img_logo"
-        app:layout_constraintStart_toEndOf="@+id/layout_station"
-        app:layout_constraintTop_toTopOf="@+id/layout_station"
-        tools:text="พหลโยธิน 59" />
-
-    <ImageView
-        android:id="@+id/img_logo"
-        android:layout_width="25dp"
-        android:layout_height="0dp"
-        android:src="@drawable/icon_srt"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_station_name_th"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_station_name_th" />
-
-    <FrameLayout
-        android:id="@+id/layout_station_code"
-        android:layout_width="65dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/space_small"
-        android:background="@drawable/ic_bg_apl_stroke"
-        android:paddingVertical="@dimen/space_smaller"
+        android:layout_marginBottom="@dimen/space_normal_12dp"
+        android:background="@drawable/bg_white_stroke_black_16dp"
+        android:padding="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_station">
+        app:layout_constraintTop_toBottomOf="@+id/badge">
+
+        <FrameLayout
+            android:id="@+id/layout_station"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_bg_apl"
+            android:paddingVertical="@dimen/space_smaller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/mn_paethai_bystorylog_regular"
+                android:textColor="@color/white"
+                tools:text="BTS" />
+        </FrameLayout>
 
         <TextView
-            android:id="@+id/tv_station_code"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_station_name_th"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/red_light_srt"
-            tools:text="N24" />
-    </FrameLayout>
+            android:layout_marginStart="@dimen/space_normal"
+            android:ellipsize="end"
+            android:fontFamily="@font/mn_paethai_bystorylog_regular"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_station"
+            app:layout_constraintEnd_toStartOf="@+id/img_logo"
+            app:layout_constraintStart_toEndOf="@+id/layout_station"
+            app:layout_constraintTop_toTopOf="@+id/layout_station"
+            tools:text="พหลโยธิน 59" />
 
-    <TextView
-        android:id="@+id/tv_station_name_en"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/space_normal"
-        android:ellipsize="end"
-        android:fontFamily="@font/db_heavent_now"
-        android:maxLines="1"
-        android:textColor="@color/gray500"
-        app:layout_constraintBottom_toBottomOf="@+id/layout_station_code"
-        app:layout_constraintEnd_toStartOf="@+id/tv_distance"
-        app:layout_constraintStart_toEndOf="@+id/layout_station_code"
-        app:layout_constraintTop_toTopOf="@+id/layout_station_code"
-        tools:text="Phahol Yothin 59" />
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="25dp"
+            android:layout_height="0dp"
+            android:src="@drawable/icon_srt"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_station_name_th"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_station_name_th" />
 
-    <TextView
-        android:id="@+id/tv_distance"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/space_normal"
-        android:ellipsize="end"
-        android:fontFamily="@font/db_heavent_now"
-        android:maxLines="1"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_station_name_en"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_station_name_en"
-        tools:text="1.5 km" />
+        <FrameLayout
+            android:id="@+id/layout_station_code"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_small"
+            android:background="@drawable/ic_bg_apl_stroke"
+            android:paddingVertical="@dimen/space_smaller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_station">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_height"
-        android:layout_marginTop="@dimen/space_normal_12dp"
-        android:background="@color/gray200"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_station_code" />
+            <TextView
+                android:id="@+id/tv_station_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/mn_paethai_bystorylog_regular"
+                android:textColor="@color/red_light_srt"
+                tools:text="N24" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_station_name_en"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_normal"
+            android:ellipsize="end"
+            android:fontFamily="@font/mn_paethai_bystorylog_regular"
+            android:maxLines="1"
+            android:textColor="@color/gray500"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_station_code"
+            app:layout_constraintEnd_toStartOf="@+id/tv_distance"
+            app:layout_constraintStart_toEndOf="@+id/layout_station_code"
+            app:layout_constraintTop_toTopOf="@+id/layout_station_code"
+            tools:text="Phahol Yothin 59" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/space_normal"
+            android:ellipsize="end"
+            android:fontFamily="@font/mn_paethai_bystorylog_regular"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_station_name_en"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_station_name_en"
+            tools:text="1.5 km" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
