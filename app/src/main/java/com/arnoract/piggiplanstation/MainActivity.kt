@@ -14,18 +14,15 @@ import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.arnoract.piggiplanstation.base.BaseActivity
 import com.arnoract.piggiplanstation.core.setDebounceOnClickListener
-import com.arnoract.piggiplanstation.core.toast
 import com.arnoract.piggiplanstation.databinding.ActivityMainBinding
 import com.arnoract.piggiplanstation.ui.main.adapter.SeeMoreAdapter
 import com.arnoract.piggiplanstation.ui.main.adapter.StationAdapter
+import com.arnoract.piggiplanstation.ui.main.detail.DestinationDetailActivity
 import com.arnoract.piggiplanstation.ui.main.dialog.FilterBottomSheetDialog
-import com.arnoract.piggiplanstation.ui.main.dialog.MapOverViewBottomSheetDialog
 import com.arnoract.piggiplanstation.ui.main.model.UiSeeMore
 import com.arnoract.piggiplanstation.ui.main.model.UiStation
 import com.arnoract.piggiplanstation.ui.main.model.UiType
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
@@ -164,9 +161,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
             )
         }
         mViewModel.onClickStationEvent.observe(this) {
-            MapOverViewBottomSheetDialog.newInstance(it).show(
-                supportFragmentManager, MapOverViewBottomSheetDialog::class.java.canonicalName
-            )
+            val intent = Intent(this, DestinationDetailActivity::class.java)
+            intent.putExtra(DestinationDetailActivity.DESTINATION_ID, it.first)
+            intent.putExtra(DestinationDetailActivity.LOCATION_NAME, it.second)
+            intent.putExtra(DestinationDetailActivity.DISTANCE_STRING, it.third)
+            startActivity(intent)
+//            MapOverViewBottomSheetDialog.newInstance(it).show(
+//                supportFragmentManager, MapOverViewBottomSheetDialog::class.java.canonicalName
+//            )
         }
         mViewModel.isEnableFilter.observe(this) {
             binding.imvFilter.apply {

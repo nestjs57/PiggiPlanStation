@@ -200,7 +200,7 @@ class MapOverViewBottomSheetDialog : BottomSheetDialogFragment() {
                     if (firstStation != null) {
                         Pair(firstStation, stationsOfType.drop(1))
                     } else {
-                        Pair(RouteStation("", "", 0, ""), emptyList())
+                        Pair(RouteStation("", "", "", 0, ""), emptyList())
                     }
                 } ?: listOf()
 

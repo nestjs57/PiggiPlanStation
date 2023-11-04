@@ -10,7 +10,6 @@ import com.arnoract.piggiplanstation.domain.main.FindShortestPathUseCase
 import com.arnoract.piggiplanstation.domain.main.GetStationsUseCase
 import com.arnoract.piggiplanstation.domain.model.main.Station
 import com.arnoract.piggiplanstation.ui.main.dialog.FilterBottomSheetDialog.TypeSelected
-import com.arnoract.piggiplanstation.ui.main.dialog.model.UiOverview
 import com.arnoract.piggiplanstation.ui.main.mapper.StationToUiStationMapper
 import com.arnoract.piggiplanstation.ui.main.model.UiStation
 import com.arnoract.piggiplanstation.ui.main.model.UiType
@@ -68,8 +67,8 @@ class MainActivityViewModel(
     val isLoadingLocationNearMe: LiveData<Boolean>
         get() = _isLoadingLocationNearMe
 
-    private val _onClickStationEvent = MutableLiveData<UiOverview>()
-    val onClickStationEvent: LiveData<UiOverview>
+    private val _onClickStationEvent = MutableLiveData<Triple<String, String, String>>()
+    val onClickStationEvent: LiveData<Triple<String, String, String>>
         get() = _onClickStationEvent
 
     init {
@@ -177,23 +176,26 @@ class MainActivityViewModel(
 
     fun onClickStation(data: UiStation) {
         viewModelScope.launch {
-            val start = _stationNearMe.value?.id
+//            val start = _stationNearMe.value?.id
+//            val end = data.id
+//            val result = withContext(coroutinesDispatcherProvider.io) {
+//                findShortestPathUseCase.invoke(
+//                    FindShortestPathUseCase.Params(
+//                        startStationId = start ?: "", endStationId = end
+//                    )
+//                ).successOr(listOf())
+//            }
+//            _onClickStationEvent.value = UiOverview(
+//                locationToGo = _locationName.value ?: "",
+//                startStation = _stationNearMe.value,
+//                distanceBetweenCurrentAndStartStation = _stationNearMe.value?.distanceStr ?: "",
+//                endStation = data,
+//                distanceBetweenLastStationAndDestinationLocation = data.distanceStr,
+//                routes = result,
+//            )
             val end = data.id
-            val result = withContext(coroutinesDispatcherProvider.io) {
-                findShortestPathUseCase.invoke(
-                    FindShortestPathUseCase.Params(
-                        startStationId = start ?: "", endStationId = end
-                    )
-                ).successOr(listOf())
-            }
-            _onClickStationEvent.value = UiOverview(
-                locationToGo = _locationName.value ?: "",
-                startStation = _stationNearMe.value,
-                distanceBetweenCurrentAndStartStation = _stationNearMe.value?.distanceStr ?: "",
-                endStation = data,
-                distanceBetweenLastStationAndDestinationLocation = data.distanceStr,
-                routes = result,
-            )
+            _onClickStationEvent.value =
+                Triple(end, _locationName.value ?: "", data.distanceStr)
         }
     }
 

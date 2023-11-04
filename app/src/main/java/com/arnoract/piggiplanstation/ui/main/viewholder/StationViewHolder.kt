@@ -44,7 +44,11 @@ class StationViewHolder(
         binding.tvDistance.text = data?.distanceStr
         binding.tvStationCode.text = data?.id
 
-        binding.badge.visibility = if (position == 0) View.VISIBLE else View.GONE
+        if (data?.isShowOnlyItem == false) {
+            binding.badge.visibility = if (position == 0) View.VISIBLE else View.GONE
+        } else {
+            binding.badge.visibility = View.GONE
+        }
 
         binding.tvDistance.visibility =
             if (data?.isShowDistance == true) View.VISIBLE else View.INVISIBLE

@@ -1,11 +1,9 @@
 package com.arnoract.piggiplanstation.domain.main
 
-import android.util.Log
 import com.arnoract.piggiplanstation.core.UseCase
 import com.arnoract.piggiplanstation.domain.model.main.RouteConnection
 import com.arnoract.piggiplanstation.domain.model.main.RouteStation
 import com.arnoract.piggiplanstation.domain.model.main.Station
-import com.google.gson.Gson
 
 class FindShortestPathUseCase(
     private val stationRepository: StationRepository
@@ -70,7 +68,11 @@ class FindShortestPathUseCase(
 
         fun mapRouteStation(model: Station): RouteStation {
             return RouteStation(
-                id = model.id, nameTh = model.name_th, type = model.type, typeName = model.type_name
+                id = model.id,
+                nameTh = model.name_th,
+                type = model.type,
+                typeName = model.type_name,
+                nameEn = model.name_en
             )
         }
 

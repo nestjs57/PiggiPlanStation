@@ -9,7 +9,11 @@ import com.arnoract.piggiplanstation.util.FormatUtils.formatNumberWithDecimal
 import com.arnoract.piggiplanstation.util.FormatUtils.formatNumberWithOrWithOutDecimal
 import com.arnoract.piggiplanstation.util.getDistanceMeter
 
-class StationToUiStationMapper(private val lat: Double, private val long: Double) :
+class StationToUiStationMapper(
+    private val lat: Double,
+    private val long: Double,
+    val ignoreDistance: Boolean = false ,
+) :
     Mapper<Station, UiStation> {
     override fun map(from: Station): UiStation {
         val locationA = Location("location_a").apply {
@@ -20,9 +24,8 @@ class StationToUiStationMapper(private val lat: Double, private val long: Double
             latitude = lat
             longitude = long
         }
-        val distance = getDistanceMeter(locationA, locationB)
-        val distanceStr = if (distance >= 1000.0
-        ) "${
+        val distance = if (ignoreDistance) 0f else getDistanceMeter(locationA, locationB)
+        val distanceStr = if (ignoreDistance) "0" else if (distance >= 1000.0) "${
             formatNumberWithOrWithOutDecimal(
                 distance.div(1000).toDouble()
             )

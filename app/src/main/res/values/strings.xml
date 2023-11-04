@@ -27,4 +27,13 @@
     <string name="see_more_label">ดูเพิ่มเติม..</string>
     <string name="list_of_nearby_station_label">รายชื่อสถานีใกล้ : %s</string>
     <string name="station_near_me_label">ใกล้ฉัน</string>
+
+    <string name="choose_start_station_label">เลือกสถานีเริ่มต้น</string>
+    <string name="go_to_with_text_label">ไปยัง %s</string>
+    <string name="description_way_with_dash">รายละเอียดเส้นทาง : -</string>
+    <string name="description_way_with_value_of_station">รายละเอียดเส้นทาง (%s สถานี) :</string>
+    <string name="back_label">ย้อนกลับ</string>
+    <string name="select_station_label">เลือกสถานี</string>
+    <string name="search_station_label">ค้นหาสถานี…</string>
+    <string name="search_station_not_found">ไม่พบสถานีที่ค้นหา</string>
 </resources>

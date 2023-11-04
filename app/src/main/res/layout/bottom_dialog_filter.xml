@@ -27,6 +27,7 @@
                 android:maxLines="1"
                 android:text="@string/reset_filter_type"
                 android:textColor="@color/black"
+                android:textSize="@dimen/text_headline"
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -61,7 +62,8 @@
                 android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/view_only_bts"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_headline" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imv_view_only_bts_selected"
@@ -97,7 +99,8 @@
                 android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/view_only_mrt"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_headline" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imv_view_only_mrt_selected"
@@ -133,7 +136,8 @@
                 android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/view_only_apl"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_headline" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imv_view_only_apl_selected"
@@ -160,7 +164,7 @@
 
             <TextView
                 android:id="@+id/tv_view_only_srt"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/space_normal"
@@ -169,7 +173,8 @@
                 android:fontFamily="@font/mn_paethai_bystorylog_regular"
                 android:maxLines="1"
                 android:text="@string/view_only_srt"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_headline" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imv_view_only_srt_selected"
