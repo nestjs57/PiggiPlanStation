@@ -63,16 +63,22 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="@dimen/space_large"
             android:background="@drawable/bg_white_stroke_black_16dp"
+            android:drawablePadding="@dimen/space_small"
             android:hint="@string/search_station_label"
+            android:lines="1"
+            android:maxLines="1"
             android:padding="16dp"
-            android:textCursorDrawable="@drawable/cursor_color" />
+            android:textCursorDrawable="@drawable/cursor_color"
+            card_view:drawableStartCompat="@drawable/quantum_ic_search_grey600_24"
+            card_view:drawableTint="@color/gray500" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_station"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:paddingHorizontal="16dp"
-            tools:itemCount="10"
+            tools:itemCount="2"
             tools:listitem="@layout/view_item_station" />
 
         <TextView
@@ -80,15 +86,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:ellipsize="end"
             android:fontFamily="@font/mn_paethai_bystorylog_regular"
-            android:gravity="center"
+            android:gravity="top"
             android:maxLines="1"
             android:text="@string/search_station_not_found"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:visibility="gone"
             tools:visibility="visible" />
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ads_unit_id"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
 

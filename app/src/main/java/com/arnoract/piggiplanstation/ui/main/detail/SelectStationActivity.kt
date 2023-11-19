@@ -12,6 +12,7 @@ import com.arnoract.piggiplanstation.core.setDebounceOnClickListener
 import com.arnoract.piggiplanstation.databinding.ActivitySelectStationBinding
 import com.arnoract.piggiplanstation.ui.main.adapter.StationAdapter
 import com.arnoract.piggiplanstation.ui.main.model.UiStation
+import com.google.android.gms.ads.AdRequest
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SelectStationActivity : BaseActivity<ActivitySelectStationBinding>(),
@@ -30,6 +31,12 @@ class SelectStationActivity : BaseActivity<ActivitySelectStationBinding>(),
         supportActionBar?.hide()
         initView()
         observeViewModel()
+        loadAds()
+    }
+
+    private fun loadAds() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
     }
 
     private fun initView() {

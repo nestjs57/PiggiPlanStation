@@ -13,6 +13,7 @@ import com.arnoract.piggiplanstation.base.BaseActivity
 import com.arnoract.piggiplanstation.core.setDebounceOnClickListener
 import com.arnoract.piggiplanstation.databinding.ActivityDestinationDetailBinding
 import com.arnoract.piggiplanstation.ui.main.model.UiType
+import com.google.android.gms.ads.AdRequest
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -39,6 +40,7 @@ class DestinationDetailActivity : BaseActivity<ActivityDestinationDetailBinding>
         initView()
         observeViewModel()
         observeResult()
+        loadAds()
     }
 
     private fun initView() {
@@ -71,6 +73,11 @@ class DestinationDetailActivity : BaseActivity<ActivityDestinationDetailBinding>
                 }
             }
         }
+    }
+
+    private fun loadAds() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
     }
 
     private fun observeViewModel() {
