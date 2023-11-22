@@ -110,7 +110,9 @@ class MainActivityViewModel(
             }
 
             TypeSelected.MRT -> _originalUiStations.value?.count {
-                it.type in setOf(UiType.MRT_BLUE, UiType.MRT_PURPLE, UiType.MRT_YELLOW)
+                it.type in setOf(
+                    UiType.MRT_BLUE, UiType.MRT_PURPLE, UiType.MRT_YELLOW, UiType.MRT_PINK
+                )
             }
 
             TypeSelected.APL -> _originalUiStations.value?.count { it.type == UiType.APL }
@@ -150,7 +152,7 @@ class MainActivityViewModel(
 
             TypeSelected.MRT -> _originalUiStations.value?.filter {
                 it.type in setOf(
-                    UiType.MRT_BLUE, UiType.MRT_PURPLE, UiType.MRT_YELLOW
+                    UiType.MRT_BLUE, UiType.MRT_PURPLE, UiType.MRT_YELLOW, UiType.MRT_PINK
                 )
             }
 
@@ -194,8 +196,7 @@ class MainActivityViewModel(
 //                routes = result,
 //            )
             val end = data.id
-            _onClickStationEvent.value =
-                Triple(end, _locationName.value ?: "", data.distanceStr)
+            _onClickStationEvent.value = Triple(end, _locationName.value ?: "", data.distanceStr)
         }
     }
 

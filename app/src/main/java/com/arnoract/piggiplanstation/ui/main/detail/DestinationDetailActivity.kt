@@ -3,6 +3,7 @@ package com.arnoract.piggiplanstation.ui.main.detail
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -137,6 +138,11 @@ class DestinationDetailActivity : BaseActivity<ActivityDestinationDetailBinding>
                     binding.tvStationCodeEnd.text = getString(R.string.mrt_code_label)
                 }
 
+                UiType.MRT_PINK -> {
+                    binding.layoutStationCodeEnd.setBackgroundResource(R.drawable.ic_bg_mrt_pink)
+                    binding.tvStationCodeEnd.text = getString(R.string.mrt_code_label)
+                }
+
                 else -> {
                     binding.layoutStationCodeEnd.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth)
                     binding.tvStationCodeEnd.text = getString(R.string.srtet_code_label)
@@ -144,6 +150,7 @@ class DestinationDetailActivity : BaseActivity<ActivityDestinationDetailBinding>
             }
         }
         mViewModel.startLocationCode.observe(this) {
+            Log.d("startLocationCode",it.name)
             binding.layoutStationCodeStart.visibility = View.VISIBLE
             when (it) {
                 UiType.BTS_SKW -> {
@@ -188,6 +195,11 @@ class DestinationDetailActivity : BaseActivity<ActivityDestinationDetailBinding>
 
                 UiType.MRT_YELLOW -> {
                     binding.layoutStationCodeStart.setBackgroundResource(R.drawable.ic_bg_mrt_yellow)
+                    binding.tvStationCodeStart.text = getString(R.string.mrt_code_label)
+                }
+
+                UiType.MRT_PINK -> {
+                    binding.layoutStationCodeStart.setBackgroundResource(R.drawable.ic_bg_mrt_pink)
                     binding.tvStationCodeStart.text = getString(R.string.mrt_code_label)
                 }
 

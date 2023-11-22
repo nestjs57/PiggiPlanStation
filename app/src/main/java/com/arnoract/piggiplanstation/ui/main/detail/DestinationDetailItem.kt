@@ -44,6 +44,7 @@ fun DestinationDetailItem(data: RouteStation) {
         UiType.RED_NORMAL -> R.color.red_srt
         UiType.RED_WEAK -> R.color.red_light_srt
         UiType.MRT_YELLOW -> R.color.yellow_mrt
+        UiType.MRT_PINK -> R.color.pink_mrt
     }
 
     Column {

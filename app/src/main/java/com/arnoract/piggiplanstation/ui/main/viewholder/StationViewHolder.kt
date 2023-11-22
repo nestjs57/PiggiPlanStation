@@ -134,6 +134,15 @@ class StationViewHolder(
                 binding.badge.setBackgroundColor(context.resources.getColor(R.color.yellow_mrt))
             }
 
+            UiType.MRT_PINK -> {
+                binding.imgLogo.setImageResource(R.drawable.icon_mrt_pink)
+                binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_mrt_pink)
+                binding.tvStation.text = context.getString(R.string.mrt_code_label)
+                binding.layoutStationCode.setBackgroundResource(R.drawable.ic_bg_mrt_pink_stroke)
+                binding.tvStationCode.setTextColor(context.getColor(R.color.pink_mrt))
+                binding.badge.setBackgroundColor(context.resources.getColor(R.color.pink_mrt))
+            }
+
             else -> {
                 binding.imgLogo.setImageResource(R.drawable.icon_srt)
                 binding.layoutStation.setBackgroundResource(R.drawable.ic_bg_srtet_red_ligth)

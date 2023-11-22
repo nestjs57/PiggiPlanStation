@@ -1,0 +1,302 @@
+[
+  {
+    "id": "PK01",
+    "name_th": "ศูนย์ราชการนนทบุรี",
+    "name_en": "Nonthaburi Civic Center",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.859880315836216,
+    "long": 100.51812953804217
+  },
+  {
+    "id": "PK02",
+    "name_th": "แคราย",
+    "name_en": "Khae Rai",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.862917313108685,
+    "long": 100.52062499571412
+  },
+  {
+    "id": "PK03",
+    "name_th": "สนามบินน้ำ",
+    "name_en": "Sanambin Nam",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.874429134398126,
+    "long": 100.51626026687839
+  },
+  {
+    "id": "PK04",
+    "name_th": "สามัคคี",
+    "name_en": "Samakkhi",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.889557289157972,
+    "long": 100.5105222668787
+  },
+  {
+    "id": "PK05",
+    "name_th": "กรมชลประทาน",
+    "name_en": "Royal Irrigation Department",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.898798621957933,
+    "long": 100.50703426687888
+  },
+  {
+    "id": "PK06",
+    "name_th": "แยกปากเกร็ด",
+    "name_en": "Yaek Pak Kret",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.906403111381627,
+    "long": 100.50541504709867
+  },
+  {
+    "id": "PK07",
+    "name_th": "เลี่ยงเมืองปากเกร็ด",
+    "name_en": "Pak Kret Bypass",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.906669445016275,
+    "long": 100.51556326687901
+  },
+  {
+    "id": "PK08",
+    "name_th": "แจ้งวัฒนะ-ปากเกร็ด 28",
+    "name_en": "Chaeng Watthana-Pak Kret 28",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.904370861350074,
+    "long": 100.52918872455076
+  },
+  {
+    "id": "PK09",
+    "name_th": "ศรีรัช",
+    "name_en": "Si Rat",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.900760864439206,
+    "long": 100.53994526687889
+  },
+  {
+    "id": "PK10",
+    "name_th": "เมืองทองธานี",
+    "name_en": "Muang Thong Thani",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.897595281922593,
+    "long": 100.54837526687882
+  },
+  {
+    "id": "PK11",
+    "name_th": "แจ้งวัฒนะ 14",
+    "name_en": "Chaeng Watthana 14",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.893506115523262,
+    "long": 100.56009299571461
+  },
+  {
+    "id": "PK12",
+    "name_th": "ศูนย์ราชการเฉลิมพระเกียรติ",
+    "name_en": "Government Complex",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.890955118048792,
+    "long": 100.56726453804288
+  },
+  {
+    "id": "PK13",
+    "name_th": "โทรคมนาคมแห่งชาติ",
+    "name_en": "National Telecom",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.88774846035047,
+    "long": 100.57563880920675
+  },
+  {
+    "id": "PK14",
+    "name_th": "หลักสี่",
+    "name_en": "Lak Si",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.884316293873438,
+    "long": 100.58256253804265
+  },
+  {
+    "id": "PK15",
+    "name_th": "ราชภัฏพระนคร",
+    "name_en": "Rajabhat Phranakhon",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.880231297547684,
+    "long": 100.58923899571442
+  },
+  {
+    "id": "PK16",
+    "name_th": "วัดพระศรีมหาธาตุ",
+    "name_en": "Wat Phra Sri Mahathat",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.87463371838802,
+    "long": 100.59679580920651
+  },
+  {
+    "id": "PK17",
+    "name_th": "รามอินทรา 3",
+    "name_en": "Ram Inthra 3",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.87115230570978,
+    "long": 100.60256926687829
+  },
+  {
+    "id": "PK18",
+    "name_th": "ลาดปลาเค้า",
+    "name_en": "Lat Pla Khao",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.862980896721508,
+    "long": 100.61776426687813
+  },
+  {
+    "id": "PK19",
+    "name_th": "รามอินทรา กม.4",
+    "name_en": "Ram Inthra Kor Mor 4",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.858498317077173,
+    "long": 100.62609026687808
+  },
+  {
+    "id": "PK20",
+    "name_th": "มัยลาภ",
+    "name_en": "Maiyalap",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.855196486683823,
+    "long": 100.63218726687802
+  },
+  {
+    "id": "PK21",
+    "name_th": "วัชรพล",
+    "name_en": "Vacharaphol",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.849424325222342,
+    "long": 100.6428669957139
+  },
+  {
+    "id": "PK22",
+    "name_th": "รามอินทรา กม.6",
+    "name_en": "Ram Inthra Kor Mor 6",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.845430911688418,
+    "long": 100.65021026687789
+  },
+  {
+    "id": "PK23",
+    "name_th": "คู้บอน",
+    "name_en": "Khu Bon",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.840765081013918,
+    "long": 100.65881026687775
+  },
+  {
+    "id": "PK24",
+    "name_th": "รามอินทรา กม.9",
+    "name_en": "Ram Inthra Kor Mor 9",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.834061174254673,
+    "long": 100.6674420803699
+  },
+  {
+    "id": "PK25",
+    "name_th": "วงแหวนรามอินทรา",
+    "name_en": "Outer Ring Road-Ram Inthra",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.824705765429487,
+    "long": 100.6771067245493
+  },
+  {
+    "id": "PK26",
+    "name_th": "นพรัตน์",
+    "name_en": "Nopparat",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.816783354478945,
+    "long": 100.6855305380415
+  },
+  {
+    "id": "PK27",
+    "name_th": "บางชัน",
+    "name_en": "Bang Chan",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.812945195057855,
+    "long": 100.70275826687724
+  },
+  {
+    "id": "PK28",
+    "name_th": "เศรษฐบุตรบำเพ็ญ",
+    "name_en": "Setthabutbamphen",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.812921939363548,
+    "long": 100.71240599571318
+  },
+  {
+    "id": "PK29",
+    "name_th": "ตลาดมีนบุรี",
+    "name_en": "Min Buri Market",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.812744939514051,
+    "long": 100.72565399571316
+  },
+  {
+    "id": "PK30",
+    "name_th": "มีนบุรี",
+    "name_en": "Min Buri",
+    "type": 10,
+    "type_name": "สายสีชมพู",
+    "have_parking": 0,
+    "lat": 13.80866161803792,
+    "long": 100.7325889957131
+  }
+]

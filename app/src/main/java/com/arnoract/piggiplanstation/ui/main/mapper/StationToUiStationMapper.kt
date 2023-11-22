@@ -12,7 +12,7 @@ import com.arnoract.piggiplanstation.util.getDistanceMeter
 class StationToUiStationMapper(
     private val lat: Double,
     private val long: Double,
-    val ignoreDistance: Boolean = false ,
+    val ignoreDistance: Boolean = false,
 ) :
     Mapper<Station, UiStation> {
     override fun map(from: Station): UiStation {
@@ -54,6 +54,7 @@ class StationToUiStationMapper(
             7 -> UiType.RED_NORMAL
             8 -> UiType.RED_WEAK
             9 -> UiType.MRT_YELLOW
+            10 -> UiType.MRT_PINK
             else -> UiType.RED_WEAK
         }
     }

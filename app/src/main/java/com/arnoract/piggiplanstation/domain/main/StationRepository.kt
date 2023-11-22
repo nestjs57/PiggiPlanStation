@@ -12,4 +12,5 @@ interface StationRepository {
     suspend fun getMrtYellow(): MutableList<Station>
     suspend fun getRedNormal(): MutableList<Station>
     suspend fun getRedWeak(): MutableList<Station>
+    suspend fun getMrtPink(): MutableList<Station>
 }

@@ -370,6 +370,7 @@ fun ItemRoute(
         UiType.RED_NORMAL -> R.drawable.icon_srt
         UiType.RED_WEAK -> R.drawable.icon_srt
         UiType.MRT_YELLOW -> R.drawable.icon_mrt_yellow
+        UiType.MRT_PINK -> R.drawable.icon_mrt_pink
     }
 
     val prefix = when {
@@ -387,6 +388,7 @@ fun ItemRoute(
         UiType.RED_NORMAL -> R.color.red_srt
         UiType.RED_WEAK -> R.color.red_light_srt
         UiType.MRT_YELLOW -> R.color.gold_bts
+        UiType.MRT_PINK -> R.color.pink_mrt
     }
 
     Column {
@@ -425,6 +427,7 @@ fun ItemRoute(
         UiType.RED_NORMAL -> R.color.red_srt
         UiType.RED_WEAK -> R.color.red_light_srt
         UiType.MRT_YELLOW -> R.color.yellow_mrt
+        UiType.MRT_PINK -> R.color.pink_mrt
     }
 
     if (isLastPosition && data.second.isEmpty()) {

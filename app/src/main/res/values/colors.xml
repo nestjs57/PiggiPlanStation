@@ -34,6 +34,7 @@
     <color name="red_srt">#F60723</color>
     <color name="red_light_srt">#D76A6C</color>
     <color name="yellow_mrt">#f4db00</color>
+    <color name="pink_mrt">#eea1c3</color>
 
     <color name="status_bar_color">#154B4F</color>
     <color name="primary">#FF6347</color>

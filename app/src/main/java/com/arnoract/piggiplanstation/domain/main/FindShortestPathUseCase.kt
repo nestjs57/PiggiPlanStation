@@ -18,6 +18,7 @@ class FindShortestPathUseCase(
         val mrtYellowConnections: Map<String, List<String>>,
         val redNormalConnections: Map<String, List<String>>,
         val redWeakConnections: Map<String, List<String>>,
+        val mrtPinkConnections: Map<String, List<String>>,
     )
 
     override suspend fun execute(parameters: Params): List<RouteStation> {
@@ -35,6 +36,7 @@ class FindShortestPathUseCase(
                     )
                 }
 
+                // mrt สีน้ำเงิน ไปได้ 3 สาย
                 if (station.id == "BL01") {
                     station.connections += createConnection(stations.first { it.id == "BL32" })
                     station.connections += createConnection(stations.first { it.id == "BL33" })
@@ -47,6 +49,20 @@ class FindShortestPathUseCase(
                     station.connections += createConnection(stations.first { it.id == "BL01" })
                     station.connections += createConnection(stations.first { it.id == "BL33" })
                 }
+
+                // mrt สีชมพู ไปได้ 3 สาย (MT01 , MT02 ในอนาคต)
+//                if (station.id == "BL01") {
+//                    station.connections += createConnection(stations.first { it.id == "BL32" })
+//                    station.connections += createConnection(stations.first { it.id == "BL33" })
+//                }
+//                if (station.id == "BL33") {
+//                    station.connections += createConnection(stations.first { it.id == "BL01" })
+//                    station.connections += createConnection(stations.first { it.id == "BL32" })
+//                }
+//                if (station.id == "BL32") {
+//                    station.connections += createConnection(stations.first { it.id == "BL01" })
+//                    station.connections += createConnection(stations.first { it.id == "BL33" })
+//                }
             }
         }
 
@@ -102,8 +118,11 @@ class FindShortestPathUseCase(
         val redWeak = stationRepository.getRedWeak().map { mapRouteStation(it) }
         connectStations(redWeak)
 
+        val mrtPink = stationRepository.getMrtPink().map { mapRouteStation(it) }
+        connectStations(mrtPink)
+
         val systemRoutes =
-            btsSkw + btsSl + mrtBlue + mrtPurple + apl + mrtYellow + redNormal + redWeak
+            btsSkw + btsSl + mrtBlue + mrtPurple + apl + mrtYellow + redNormal + redWeak + mrtPink
 
         val connectionMaps = ConnectionMap(
             skwConnections = mapOf(
@@ -112,7 +131,8 @@ class FindShortestPathUseCase(
                 "N02" to listOf("A7"),
                 "E1" to listOf("CEN"),
                 "E4" to listOf("BL22"),
-                "E15" to listOf("YL23")
+                "E15" to listOf("YL23"),
+                "N17" to listOf("PK16")
             ), slConnections = mapOf(
                 "CEN" to listOf("E1"), "S2" to listOf("BL26"), "S12" to listOf("BL34")
             ), mrtBlueConnections = mapOf(
@@ -126,21 +146,28 @@ class FindShortestPathUseCase(
                 "BL34" to listOf("S12"),
                 "BL11" to listOf("RN01", "RW01")
             ), mrtPurpleConnections = mapOf(
-                "PP15" to listOf("RW02"), "PP16" to listOf("BL10")
+                "PP15" to listOf("RW02"), "PP16" to listOf("BL10"), "PP11" to listOf("PK01")
             ), aplConnections = mapOf(
                 "A4" to listOf("YL11"), "A6" to listOf("BL21"), "A8" to listOf("N02")
             ), mrtYellowConnections = mapOf(
                 "YL01" to listOf("BL15"), "YL11" to listOf("A4"), "YL23" to listOf("E15")
             ), redNormalConnections = mapOf(
-                "RN01" to listOf("BL11")
+                "RN01" to listOf("BL11"), "RN06" to listOf("PK14")
             ), redWeakConnections = mapOf(
                 "RW01" to listOf("BL11"), "RW02" to listOf("PP15")
+            ), mrtPinkConnections = mapOf(
+                "PK01" to listOf("PP11"), "PK14" to listOf("RN06"), "PK16" to listOf("N17")
             )
         )
 
         updateConnections(
             btsSkw, connectionMaps.skwConnections, mapOf(
-                "BL14" to mrtBlue, "A7" to apl, "CEN" to btsSl, "YL23" to mrtYellow, "S2" to btsSl
+                "BL14" to mrtBlue,
+                "A7" to apl,
+                "CEN" to btsSl,
+                "YL23" to mrtYellow,
+                "S2" to btsSl,
+                "PK16" to mrtPink
             )
         )
         updateConnections(
@@ -165,7 +192,7 @@ class FindShortestPathUseCase(
         updateConnections(
             mrtPurple,
             connectionMaps.mrtPurpleConnections,
-            mapOf("RW02" to redWeak, "BL10" to mrtBlue)
+            mapOf("RW02" to redWeak, "BL10" to mrtBlue, "PK01" to mrtPink),
         )
 
         updateConnections(
@@ -181,13 +208,21 @@ class FindShortestPathUseCase(
         )
 
         updateConnections(
-            redNormal, connectionMaps.redNormalConnections, mapOf("BL11" to mrtBlue)
+            redNormal,
+            connectionMaps.redNormalConnections,
+            mapOf("BL11" to mrtBlue, "PK14" to mrtPink)
         )
 
         updateConnections(
             redWeak,
             connectionMaps.redWeakConnections,
             mapOf("BL11" to mrtBlue, "PP15" to mrtPurple)
+        )
+
+        updateConnections(
+            mrtPink,
+            connectionMaps.mrtPinkConnections,
+            mapOf("PP11" to mrtPurple, "RN06" to redNormal, "N17" to btsSkw)
         )
 
         val startStation = systemRoutes.first { it.id == parameters.startStationId }

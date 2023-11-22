@@ -112,7 +112,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
                     getString(R.string.bts_code_label)
                 }
 
-                UiType.MRT_BLUE, UiType.MRT_YELLOW, UiType.MRT_PURPLE -> {
+                UiType.MRT_BLUE, UiType.MRT_YELLOW, UiType.MRT_PURPLE, UiType.MRT_PINK -> {
                     getString(R.string.mrt_code_label)
                 }
 

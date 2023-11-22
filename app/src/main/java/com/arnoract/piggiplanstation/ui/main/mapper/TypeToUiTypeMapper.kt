@@ -3,7 +3,7 @@ package com.arnoract.piggiplanstation.ui.main.mapper
 import com.arnoract.piggiplanstation.core.Mapper
 import com.arnoract.piggiplanstation.ui.main.model.UiType
 
-object TypeToUiTypeMapper : Mapper<Int , UiType> {
+object TypeToUiTypeMapper : Mapper<Int, UiType> {
     override fun map(from: Int): UiType {
         return when (from) {
             1 -> UiType.BTS_SKW
@@ -15,6 +15,7 @@ object TypeToUiTypeMapper : Mapper<Int , UiType> {
             7 -> UiType.RED_NORMAL
             8 -> UiType.RED_WEAK
             9 -> UiType.MRT_YELLOW
+            10 -> UiType.MRT_PINK
             else -> UiType.RED_WEAK
         }
     }

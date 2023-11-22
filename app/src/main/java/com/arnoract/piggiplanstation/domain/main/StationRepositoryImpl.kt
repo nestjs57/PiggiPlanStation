@@ -110,6 +110,17 @@ class StationRepositoryImpl(
         return stations.toMutableList()
     }
 
+    override suspend fun getMrtPink(): MutableList<Station> {
+        lateinit var jsonString: String
+        try {
+            jsonString = context.assets.open("pink.json").bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+
+        }
+        val stations: List<Station> = jsonString.toArrayClass(Station::class.java)
+        return stations.toMutableList()
+    }
+
     private fun <T : Any?> String.toArrayClass(toClass: Class<Station>): ArrayList<T> {
         val gson = Gson()
 
